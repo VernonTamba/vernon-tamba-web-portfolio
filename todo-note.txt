@@ -1,0 +1,8 @@
+NOTE: DELETE THIS AFTER EVERYTHING IS DONE!
+
+1. Ask AI to generate copywriting for about me not so much of bragging but just showing the excitement or love in being frontend dev and explaining my journey (all sections description paragraph)
+2. Adjust the width of the content. Should it be a bit wider? Is it to tight or compact?
+3. Encrypted text Aceternity UI for thank you section at the end?
+4. Maybe add a blog post? Using SEO?
+5. At the end, integrate sentry, Google Analytics, and stuff?
+6. Coming soon...

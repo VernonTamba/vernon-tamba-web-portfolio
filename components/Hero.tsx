@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "motion/react";
-import { Mail, MapPinHouse } from "lucide-react";
 
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import { BackgroundGradient } from "./ui/background-gradient";
@@ -16,7 +15,7 @@ import CheckmarkIcon from "@/public/icons/accept.png";
 
 const Hero = () => {
   return (
-    <div className="min-h-screen md:h-screen w-full flex flex-col-reverse md:flex-row items-center justify-center gap-8 relative overflow-hidden">
+    <div className="min-h-screen md:h-screen w-full flex flex-col-reverse md:flex-row items-center justify-center gap-8 relative">
       <div className="mx-auto relative z-10 w-full flex flex-col items-center md:items-start justify-center px-4">
         <TextGenerateEffect words={"Vernon Tamba"} />
 

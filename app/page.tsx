@@ -1,7 +1,11 @@
 import AboutMe from "@/components/AboutMe";
+import Education from "@/components/Education";
 import Hero from "@/components/Hero";
+import Skills from "@/components/Skills";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import { FloatingNav } from "@/components/ui/floating-navbar";
+import Projects from "@/components/Projects";
+import WorkExperience from "@/components/WorkExperience";
 
 import {
   IconHome,
@@ -99,6 +103,10 @@ export default function Home() {
       <FloatingNav navItems={navItems} />
       <Hero />
       <AboutMe />
+      <WorkExperience />
+      <Education />
+      <Skills />
+      <Projects />
       <FloatingDock
         mobileClassName="fixed bottom-6 right-6 z-50"
         desktopClassName="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 backdrop-blur-md"

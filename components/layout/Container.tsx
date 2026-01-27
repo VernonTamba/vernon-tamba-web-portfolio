@@ -11,11 +11,14 @@ export default function Container({ children, className }: ContainerProps) {
   return (
     <main
       className={cn(
-        "relative flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5",
+        "relative flex justify-center items-center flex-col mx-auto sm:px-10 px-5",
         className,
       )}
     >
-      <Spotlight />
+      <div className="absolute inset-0 overflow-x-hidden pointer-events-none">
+        <Spotlight xOffset={500} />
+      </div>
+
       {children}
     </main>
   );
