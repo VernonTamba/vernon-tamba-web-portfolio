@@ -8,6 +8,7 @@ import SmoothScrolling from "@/components/smooth-scrolling/SmoothScrolling";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { FLOATING_NAV_ITEMS } from "@/constants/navigations";
 import { ViewTransitions } from "next-view-transitions";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,6 +25,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const gaId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -46,6 +49,7 @@ export default function RootLayout({
           </SmoothScrolling>
         </ViewTransitions>
       </body>
+      {gaId ? <GoogleAnalytics gaId={gaId} /> : null}
     </html>
   );
 }
