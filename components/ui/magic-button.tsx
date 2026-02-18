@@ -1,11 +1,29 @@
+"use client";
+
 import { Code } from "lucide-react";
-import React from "react";
-
 import { cn } from "@/lib/utils";
+import { useLenis } from "lenis/react";
 
-const MagicButton = ({ className }: { className?: string }) => {
+const MagicButton = ({
+  className,
+  href,
+}: {
+  className?: string;
+  href?: string;
+}) => {
+  const lenis = useLenis();
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (href?.startsWith("#")) {
+      e.preventDefault();
+      lenis?.scrollTo(href);
+    }
+  };
+
   return (
-    <button
+    <a
+      href={href}
+      onClick={handleClick}
       className={cn(
         "relative inline-flex h-12 overflow-hidden rounded-lg p-[1px] focus:outline-none md:w-50 md:mt-10",
         className,
@@ -15,7 +33,7 @@ const MagicButton = ({ className }: { className?: string }) => {
       <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-7 text-sm font-medium text-white backdrop-blur-3xl">
         See my work <Code className="ml-2" />
       </span>
-    </button>
+    </a>
   );
 };
 

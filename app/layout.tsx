@@ -4,6 +4,10 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/provider/theme-provider";
 import Container from "@/components/layout/Container";
 import { cn } from "@/lib/utils";
+import SmoothScrolling from "@/components/smooth-scrolling/SmoothScrolling";
+import { FloatingNav } from "@/components/ui/floating-navbar";
+import { FLOATING_NAV_ITEMS } from "@/constants/navigations";
+import { ViewTransitions } from "next-view-transitions";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,14 +32,19 @@ export default function RootLayout({
           "bg-black/[0.96] antialiased bg-grid-white/[0.02] overflow-auto",
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Container>{children}</Container>
-        </ThemeProvider>
+        <ViewTransitions>
+          <SmoothScrolling>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="dark"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <FloatingNav navItems={FLOATING_NAV_ITEMS} />
+              <Container>{children}</Container>
+            </ThemeProvider>
+          </SmoothScrolling>
+        </ViewTransitions>
       </body>
     </html>
   );

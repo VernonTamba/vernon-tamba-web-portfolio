@@ -10,8 +10,9 @@ import {
   useSpring,
   useTransform,
 } from "motion/react";
-
 import { useRef, useState } from "react";
+// 1. Import the Lenis hook
+import { useLenis } from "lenis/react";
 
 export const FloatingDock = ({
   items,
@@ -38,6 +39,10 @@ const FloatingDockMobile = ({
   className?: string;
 }) => {
   const [open, setOpen] = useState(false);
+
+  // 2. Initialize Lenis hook
+  const lenis = useLenis();
+
   return (
     <div className={cn("relative block md:hidden", className)}>
       <AnimatePresence>
@@ -66,6 +71,14 @@ const FloatingDockMobile = ({
                 <a
                   href={item.href}
                   key={item.title}
+                  // 3. Add Smooth Scroll Handler
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (item.href.startsWith("#")) {
+                      lenis?.scrollTo(item.href);
+                      setOpen(false); // Optional: close menu on click
+                    }
+                  }}
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900"
                 >
                   <div className="h-4 w-4">{item.icon}</div>
@@ -162,8 +175,20 @@ function IconContainer({
 
   const [hovered, setHovered] = useState(false);
 
+  // 4. Initialize Lenis hook for Desktop items
+  const lenis = useLenis();
+
   return (
-    <a href={href}>
+    <a
+      href={href}
+      // 5. Add Smooth Scroll Handler
+      onClick={(e) => {
+        e.preventDefault();
+        if (href.startsWith("#")) {
+          lenis?.scrollTo(href);
+        }
+      }}
+    >
       <motion.div
         ref={ref}
         style={{ width, height }}

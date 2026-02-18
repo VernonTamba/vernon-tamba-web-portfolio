@@ -59,7 +59,7 @@ export const CardSpotlight = ({
       >
         {isHovering && (
           <CanvasRevealEffect
-            animationSpeed={0.4}
+            animationSpeed={2}
             containerClassName="bg-transparent absolute inset-0 pointer-events-none"
             colors={[
               [59, 130, 246], // Blue

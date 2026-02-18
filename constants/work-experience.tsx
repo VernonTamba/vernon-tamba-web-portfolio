@@ -23,7 +23,7 @@ export const WORK_EXPERIENCE = [
     title: "Sep 2025 - Present",
     content: (
       <div>
-        <h1 className="mb-1 text-2xl md:text-4xl font-bold">
+        <h1 className="mb-1 text-xl md:text-4xl font-bold">
           Frontend Developer
         </h1>
         <p className="mb-2 text-base md:text-lg font-normal text-neutral-800 dark:text-neutral-200">
@@ -75,7 +75,7 @@ export const WORK_EXPERIENCE = [
             className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 cursor-pointer"
           >
             <Image src={BRILogo} alt="BRI Logo" width={50} height={50} />
-            <span className="font-bold text-sm md:text-base">
+            <span className="font-bold text-xs md:text-base">
               Bank Rakyat Indonesia
             </span>
           </HoverBorderGradient>
@@ -91,7 +91,7 @@ export const WORK_EXPERIENCE = [
               width={50}
               height={50}
             />
-            <span className="font-bold text-sm md:text-base">
+            <span className="font-bold text-xs md:text-base">
               Satkomindo Mediyasa
             </span>
           </HoverBorderGradient>
@@ -103,7 +103,7 @@ export const WORK_EXPERIENCE = [
     title: "Feb 2025 - Aug 2025",
     content: (
       <div>
-        <h1 className="mb-1 text-2xl md:text-4xl font-bold">
+        <h1 className="mb-1 text-xl md:text-4xl font-bold">
           Frontend Developer
         </h1>
         <p className="mb-2 text-base md:text-lg font-normal text-neutral-800 dark:text-neutral-200">
@@ -151,7 +151,7 @@ export const WORK_EXPERIENCE = [
               width={50}
               height={50}
             />
-            <span className="font-bold text-sm md:text-base">
+            <span className="font-bold text-xs md:text-base">
               Adi Data Informatika
             </span>
           </HoverBorderGradient>
@@ -163,7 +163,7 @@ export const WORK_EXPERIENCE = [
     title: "May 2024 - Dec 2024",
     content: (
       <div>
-        <h1 className="mb-1 text-2xl md:text-4xl font-bold">
+        <h1 className="mb-1 text-xl md:text-4xl font-bold">
           Frontend Developer
         </h1>
         <p className="mb-2 text-base md:text-lg font-normal text-neutral-800 dark:text-neutral-200">
@@ -219,7 +219,7 @@ export const WORK_EXPERIENCE = [
               width={50}
               height={50}
             />
-            <span className="font-bold text-sm md:text-base">Bank Mandiri</span>
+            <span className="font-bold text-xs md:text-base">Bank Mandiri</span>
           </HoverBorderGradient>
           <HoverBorderGradient
             onClick={() => window.open(LAWENCON_URL, "_blank", "noreferrer")}
@@ -233,7 +233,7 @@ export const WORK_EXPERIENCE = [
               width={25}
               height={25}
             />
-            <span className="font-bold text-sm md:text-base">
+            <span className="font-bold text-xs md:text-base">
               Lawencon International
             </span>
           </HoverBorderGradient>
@@ -245,7 +245,7 @@ export const WORK_EXPERIENCE = [
     title: "Feb 2024 - Apr 2024",
     content: (
       <div>
-        <h1 className="mb-1 text-2xl md:text-4xl font-bold">
+        <h1 className="mb-1 text-xl md:text-4xl font-bold">
           Frontend Developer
         </h1>
         <p className="mb-2 text-base md:text-lg font-normal text-neutral-800 dark:text-neutral-200">
@@ -292,12 +292,93 @@ export const WORK_EXPERIENCE = [
               width={25}
               height={25}
             />
-            <span className="font-bold text-sm md:text-base">
+            <span className="font-bold text-xs md:text-base">
               Lawencon International
             </span>
           </HoverBorderGradient>
         </div>
       </div>
     ),
+  },
+];
+
+export const WORK_EXPERIENCE_LIFE = [
+  {
+    title: "At Bank Rakyat Indonesia",
+    link: "https://qlola.bri.co.id/",
+    thumbnail: "images/work-exp/card-3.jpg",
+  },
+  {
+    title: "At Bank Rakyat Indonesia",
+    link: "https://qlola.bri.co.id/",
+    thumbnail: "images/work-exp/bri-5.jpg",
+  },
+  {
+    title: "At Bank Rakyat Indonesia",
+    link: "https://qlola.bri.co.id/",
+    thumbnail: "images/work-exp/bri-1.jpg",
+  },
+
+  {
+    title: "At Lawencon International",
+    link: "https://www.lawencon.com/",
+    thumbnail: "images/work-exp/lawen-1.jpg",
+  },
+  {
+    title: "At Lawencon International",
+    link: "https://www.lawencon.com/",
+    thumbnail: "images/work-exp/lawen-2.jpg",
+  },
+  {
+    title: "At Lawencon International",
+    link: "https://www.lawencon.com/",
+    thumbnail: "images/work-exp/lawen-3.jpg",
+  },
+
+  {
+    title: "At Bank Mandiri",
+    link: "https://koprabymandiri.com/",
+    thumbnail: "images/work-exp/mandiri-1.jpg",
+  },
+  {
+    title: "At Bank Mandiri",
+    link: "https://koprabymandiri.com/",
+    thumbnail: "images/work-exp/mandiri-2.jpg",
+  },
+  {
+    title: "At Adi Data Informatika",
+    link: "https://adidata.co.id/",
+    thumbnail: "images/work-exp/adidata-1.jpg",
+  },
+  {
+    title: "At Adi Data Informatika",
+    link: "https://adidata.co.id/",
+    thumbnail: "images/work-exp/adidata-2.jpg",
+  },
+  {
+    title: "At Bank Mandiri",
+    link: "https://koprabymandiri.com/",
+    thumbnail: "images/work-exp/card-1.jpg",
+  },
+
+  {
+    title: "At Bank Rakyat Indonesia",
+    link: "https://qlola.bri.co.id/",
+    thumbnail: "images/work-exp/bri-2.jpg",
+  },
+  {
+    title: "At Bank Rakyat Indonesia",
+    link: "https://qlola.bri.co.id/",
+    thumbnail: "images/work-exp/bri-3.jpg",
+  },
+  {
+    title: "At Bank Rakyat Indonesia",
+    link: "https://qlola.bri.co.id/",
+    thumbnail: "images/work-exp/bri-4.jpg",
+  },
+  {
+    title: "At Adi Data Informatika",
+    link: "https://adidata.co.id/",
+    thumbnail: "images/work-exp/card-2.jpg",
   },
 ];

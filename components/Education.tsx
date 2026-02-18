@@ -5,12 +5,19 @@ import { EDUCATION } from "@/constants/education";
 
 const Education = () => {
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-center gap-8 relative md:mt-40">
-      <h1 className="text-5xl font-bold text-center">Education</h1>
+    <div
+      id="education"
+      className="min-h-screen w-full flex flex-col items-center justify-center gap-8 relative mt-30 md:mt-40"
+    >
+      <h1 className="text-5xl font-bold text-center px-4 mr-auto md:mr-0">
+        Education
+      </h1>
 
-      <h3 className="text-lg">Here is my educational background so far</h3>
+      <h3 className="text-lg px-4 mr-auto md:mr-0">
+        Here is my educational background so far
+      </h3>
 
-      <p className="text-justify max-w-4xl px-4 text-neutral-600 dark:text-neutral-400">
+      <p className="text-left md:text-justify max-w-4xl px-4 text-neutral-600 dark:text-neutral-400">
         I completed my education at Adventist International Institute of
         Advanced Studies (AIIAS) Academy graduated on 2019. Following that, I
         pursued a Bachelor's degree in Information Technology at the same
@@ -24,17 +31,19 @@ const Education = () => {
         field.
       </p>
 
-      <TracingBeam className="px-6">
-        <div className="max-w-3xl mx-auto antialiased pt-4 relative">
+      <TracingBeam>
+        <div className="max-w-4xl mx-auto antialiased pt-4 relative">
           {EDUCATION.map((item, index) => (
             <div key={`content-${index}`} className="mb-10">
-              <h2 className="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
+              <h2 className="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4 ml-auto md:ml-0">
                 {item.badge}
               </h2>
 
-              <p className="text-xl mb-4 font-bold">{item.title}</p>
+              <p className="text-base md:text-xl mb-4 font-bold text-right md:text-left">
+                {item.title}
+              </p>
 
-              <div className="text-sm prose prose-sm dark:prose-invert relative">
+              <div className="text-sm prose prose-sm dark:prose-invert relative text-right md:text-left">
                 {item?.image && (
                   <img
                     src={item.image}

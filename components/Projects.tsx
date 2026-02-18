@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import { PinContainer } from "./ui/3d-pin";
 import { AnimatedTooltip } from "./ui/animated-tooltip";
@@ -6,12 +5,19 @@ import { PROJECTS } from "@/constants/projects";
 
 const Projects = () => {
   return (
-    <div className="py-20 w-full flex flex-col items-center justify-center gap-10">
-      <h1 className="text-5xl font-bold text-center">Projects</h1>
+    <div
+      id="projects"
+      className="py-20 w-full flex flex-col items-center justify-center gap-10"
+    >
+      <h1 className="text-5xl font-bold text-left md:text-center px-4 mr-auto md:mr-0">
+        Projects
+      </h1>
 
-      <h3 className="text-lg">Here are the projects I have been involved in</h3>
+      <h3 className="text-lg px-4 mr-auto md:mr-0">
+        Here are the projects I have been involved in
+      </h3>
 
-      <p className="text-justify max-w-4xl px-4 text-neutral-600 dark:text-neutral-400">
+      <p className="text-left md:text-justify max-w-4xl px-4 text-neutral-600 dark:text-neutral-400">
         Throughout my journey as a front end developer, I have worked on various
         projects that showcase my skills and expertise in web development. Here
         are some of the notable projects I have contributed to, demonstrating my
