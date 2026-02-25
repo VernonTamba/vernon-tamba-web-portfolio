@@ -17,9 +17,9 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className="min-h-screen md:h-screen w-full flex flex-col-reverse md:flex-row items-center justify-center gap-8 relative"
+      className="relative flex min-h-screen w-full flex-col-reverse items-center justify-center gap-8 py-24 md:py-28 lg:flex-row lg:gap-12"
     >
-      <div className="mx-auto relative z-10 w-full flex flex-col items-start justify-center px-4">
+      <div className="relative z-10 mx-auto flex w-full max-w-3xl flex-col items-start justify-center px-1 sm:px-4">
         <TextGenerateEffect words={"Vernon Tamba"} />
 
         <motion.div className="relative my-4 flex items-center gap-4 sm:mx-0 sm:mb-0">
@@ -28,7 +28,7 @@ const Hero = () => {
             words={["Next.js", "React", "Angular", "WordPress"]}
           />
         </motion.div>
-        <p className="mt-4 text-justify md:text-left text-base text-neutral-600 dark:text-neutral-400">
+        <p className="mt-4 text-base leading-relaxed text-neutral-600 dark:text-neutral-400 md:text-left">
           A{" "}
           <span className="font-semibold text-neutral-900 dark:text-neutral-100">
             Frontend Developer
@@ -39,12 +39,11 @@ const Hero = () => {
           become a better developer every day.
         </p>
 
-        {/* Updated MagicButton with href */}
-        <MagicButton className="my-8 w-full" href="#projects" />
+        <MagicButton className="my-8 w-full sm:w-fit" href="#projects" />
 
-        <div className="flex flex-col md:flex-row items-start md:gap-10 text-sm md:text-base">
+        <div className="flex w-full flex-col gap-3 text-sm sm:text-base md:flex-row md:flex-wrap md:items-center md:gap-x-8 md:gap-y-3">
           <div>
-            <p className="text-[#e0e0e0] flex gap-1 font-light">
+            <p className="flex gap-1 break-all font-light text-[#e0e0e0] sm:break-normal">
               vernon.tamba777@gmail.com{" "}
               <Image
                 src={GmailIcon}
@@ -77,14 +76,14 @@ const Hero = () => {
       </div>
 
       <BackgroundGradient
-        containerClassName="hidden md:block m-4 sm:m-6 md:m-10"
-        className="rounded-[22px] p-2 bg-black"
+        containerClassName="m-4 hidden sm:block sm:m-6 md:m-8 lg:m-10"
+        className="rounded-[22px] bg-black p-2"
       >
         <Image
           src={ProfilePicture}
           alt="Vernon Tamba"
-          sizes="(max-width: 640px) 160px, (max-width: 768px) 200px, (max-width: 1024px) 380px, 440px"
-          className="w-[160px] sm:w-[200px] md:w-[380px] lg:w-[440px] h-auto object-contain rounded-[22px]"
+          sizes="(max-width: 640px) 170px, (max-width: 768px) 220px, (max-width: 1024px) 260px, 420px"
+          className="h-auto w-[170px] rounded-[22px] object-contain sm:w-[220px] md:w-[260px] lg:w-[420px]"
           priority
         />
       </BackgroundGradient>

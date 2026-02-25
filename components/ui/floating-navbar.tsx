@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Link from "next/link";
 import {
   motion,
@@ -27,20 +27,27 @@ export const FloatingNav = ({
   const { scrollYProgress } = useScroll();
 
   const [visible, setVisible] = useState(false);
+  const previousVisibleRef = useRef(false);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
     if (typeof current === "number") {
       let direction = current! - scrollYProgress.getPrevious()!;
+      let nextVisible = previousVisibleRef.current;
 
       if (scrollYProgress.get() < 0.05) {
-        setVisible(false);
+        nextVisible = false;
       } else {
         if (direction < 0) {
-          setVisible(true);
+          nextVisible = true;
         } else {
-          setVisible(false);
+          nextVisible = false;
         }
+      }
+
+      if (nextVisible !== previousVisibleRef.current) {
+        previousVisibleRef.current = nextVisible;
+        setVisible(nextVisible);
       }
     }
   });

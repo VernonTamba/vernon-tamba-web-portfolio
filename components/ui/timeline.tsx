@@ -1,10 +1,5 @@
 "use client";
-import {
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-  motion,
-} from "motion/react";
+import { useScroll, useTransform, motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 
 interface TimelineEntry {
@@ -77,65 +72,3 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     </div>
   );
 };
-
-// Demo component
-const TimelineDemo = () => {
-  const data = [
-    {
-      title: "2024",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-normal mb-4">
-            Started working on amazing projects with cutting-edge technologies.
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500&h=500&fit=crop"
-              alt="startup"
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&h=500&fit=crop"
-              alt="team"
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full"
-            />
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "2023",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-normal mb-4">
-            Expanded the team and launched multiple successful products.
-          </p>
-          <img
-            src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=400&fit=crop"
-            alt="collaboration"
-            className="rounded-lg object-cover h-44 lg:h-60 w-full"
-          />
-        </div>
-      ),
-    },
-    {
-      title: "2022",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-normal">
-            The beginning of an incredible journey with innovative ideas and
-            passionate people.
-          </p>
-        </div>
-      ),
-    },
-  ];
-
-  return (
-    <div className="w-full">
-      <Timeline data={data} />
-    </div>
-  );
-};
-
-export default TimelineDemo;

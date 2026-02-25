@@ -44,7 +44,7 @@ const FloatingDockMobile = ({
   const lenis = useLenis();
 
   return (
-    <div className={cn("relative block md:hidden", className)}>
+    <div className={cn("relative block lg:hidden", className)}>
       <AnimatePresence>
         {open && (
           <motion.div
@@ -71,13 +71,12 @@ const FloatingDockMobile = ({
                 <a
                   href={item.href}
                   key={item.title}
-                  // 3. Add Smooth Scroll Handler
                   onClick={(e) => {
-                    e.preventDefault();
                     if (item.href.startsWith("#")) {
+                      e.preventDefault();
                       lenis?.scrollTo(item.href);
-                      setOpen(false); // Optional: close menu on click
                     }
+                    setOpen(false);
                   }}
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900"
                 >
@@ -111,7 +110,7 @@ const FloatingDockDesktop = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden h-16 items-end gap-4 rounded-2xl bg-gray-50 px-4 pb-3 md:flex dark:bg-neutral-900",
+        "mx-auto hidden h-16 items-end gap-4 rounded-2xl bg-gray-50 px-4 pb-3 lg:flex dark:bg-neutral-900",
         className,
       )}
     >
@@ -181,11 +180,13 @@ function IconContainer({
   return (
     <a
       href={href}
-      // 5. Add Smooth Scroll Handler
       onClick={(e) => {
-        e.preventDefault();
         if (href.startsWith("#")) {
+          e.preventDefault();
           lenis?.scrollTo(href);
+        } else {
+          e.preventDefault();
+          window.open(href, "_blank");
         }
       }}
     >

@@ -53,10 +53,10 @@ export const Snackbar = ({
   };
 
   return (
-    <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-[9999] animate-slide-down">
+    <div className="fixed top-4 left-1/2 z-[9999] w-[calc(100%-1.5rem)] max-w-md -translate-x-1/2 transform animate-slide-down">
       <div
         className={cn(
-          "flex items-center gap-3 px-6 py-4 rounded-lg shadow-2xl backdrop-blur-sm min-w-[320px] max-w-md",
+          "flex w-full items-center gap-3 rounded-lg px-5 py-4 shadow-2xl backdrop-blur-sm sm:px-6",
           styles[type],
         )}
       >

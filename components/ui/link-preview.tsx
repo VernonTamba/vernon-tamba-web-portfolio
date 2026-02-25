@@ -1,5 +1,6 @@
 "use client";
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
+import Image from "next/image";
 
 import { encode } from "qss";
 import React from "react";
@@ -19,7 +20,6 @@ type LinkPreviewProps = {
   width?: number;
   height?: number;
   quality?: number;
-  layout?: string;
 } & (
   | { isStatic: true; imageSrc: string }
   | { isStatic?: false; imageSrc?: never }
@@ -32,7 +32,6 @@ export const LinkPreview = ({
   width = 200,
   height = 125,
   quality = 50,
-  layout = "fixed",
   isStatic = false,
   imageSrc = "",
 }: LinkPreviewProps) => {
@@ -56,12 +55,6 @@ export const LinkPreview = ({
 
   const [isOpen, setOpen] = React.useState(false);
 
-  const [isMounted, setIsMounted] = React.useState(false);
-
-  React.useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
   const springConfig = { stiffness: 100, damping: 15 };
   const x = useMotionValue(0);
 
@@ -76,12 +69,6 @@ export const LinkPreview = ({
 
   return (
     <>
-      {isMounted ? (
-        <div className="hidden">
-          <img src={src} width={width} height={height} alt="hidden image" />
-        </div>
-      ) : null}
-
       <HoverCardPrimitive.Root
         openDelay={50}
         closeDelay={100}
@@ -91,7 +78,10 @@ export const LinkPreview = ({
       >
         <HoverCardPrimitive.Trigger
           onMouseMove={handleMouseMove}
-          className={cn("text-black dark:text-white", className)}
+          className={cn(
+            "inline-flex w-full items-center text-black dark:text-white",
+            className,
+          )}
           href={url}
           target="_blank"
           rel="noopener noreferrer"
@@ -130,11 +120,13 @@ export const LinkPreview = ({
                   className="block p-1 bg-white border-2 border-transparent shadow rounded-xl hover:border-neutral-200 dark:hover:border-neutral-800"
                   style={{ fontSize: 0 }}
                 >
-                  <img
+                  <Image
                     src={isStatic ? imageSrc : src}
                     width={width}
                     height={height}
-                    className="rounded-lg"
+                    quality={quality}
+                    loading="lazy"
+                    className="rounded-lg h-auto"
                     alt="preview image"
                   />
                 </a>

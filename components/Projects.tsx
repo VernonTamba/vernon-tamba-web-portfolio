@@ -7,24 +7,23 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="py-20 w-full flex flex-col items-center justify-center gap-10"
+      className="flex w-full flex-col items-center justify-center gap-8 py-20 md:gap-10 md:py-24"
     >
-      <h1 className="text-5xl font-bold text-left md:text-center px-4 mr-auto md:mr-0">
+      <h1 className="mr-auto px-4 text-left text-3xl font-bold sm:text-4xl md:mr-0 md:text-center md:text-5xl">
         Projects
       </h1>
 
-      <h3 className="text-lg px-4 mr-auto md:mr-0">
+      <h3 className="mr-auto px-4 text-base sm:text-lg md:mr-0">
         Here are the projects I have been involved in
       </h3>
 
-      <p className="text-left md:text-justify max-w-4xl px-4 text-neutral-600 dark:text-neutral-400">
+      <p className="max-w-4xl px-4 text-left text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-base md:text-justify">
         Throughout my journey as a front end developer, I have worked on various
         projects that showcase my skills and expertise in web development. Here
         are some of the notable projects I have contributed to, demonstrating my
         ability to create dynamic and responsive web applications:
       </p>
 
-      {/* Grid Wrapper */}
       <div className="flex flex-wrap items-center justify-center gap-y-10 gap-x-2 px-4">
         {PROJECTS.map((project) => (
           <div key={project.title} className="flex flex-col items-center">

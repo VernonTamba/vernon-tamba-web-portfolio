@@ -22,8 +22,7 @@ export const EDUCATION = [
       </div>
     ),
     badge: "2023 - 2024",
-    image:
-      "https://www.lawencon.com/wp-content/uploads/2024/08/Tentang-Lawencon-Desktop.webp",
+    image: "/images/lawencon.jpg",
   },
   {
     title: "Adventist University of the Philippines (AUP)",
@@ -42,8 +41,7 @@ export const EDUCATION = [
       </div>
     ),
     badge: "2019 - 2023",
-    image:
-      "https://aupcollegeofnursing.wordpress.com/wp-content/uploads/2018/11/cropped-dji_0010-hdr-edit.jpg",
+    image: "/images/aup.jpg",
   },
   {
     title:
@@ -61,7 +59,6 @@ export const EDUCATION = [
       </div>
     ),
     badge: "2016 - 2019",
-    image:
-      "https://www.aiias.edu/wp-content/uploads/2021/05/DJI_0188-1-scaled.jpg",
+    image: "/images/aiias.jpeg",
   },
 ];

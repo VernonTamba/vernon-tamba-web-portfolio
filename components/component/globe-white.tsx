@@ -16,17 +16,18 @@ export const WhiteGlobe = ({
     let phi = 0;
 
     if (!canvasRef.current) return;
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
 
     const globe = createGlobe(canvasRef.current, {
-      devicePixelRatio: 2,
-      width: size * 2,
-      height: size * 2,
+      devicePixelRatio: dpr,
+      width: size * dpr,
+      height: size * dpr,
       phi: 0,
       theta: 0,
       dark: 1,
       diffuse: 1.2,
-      mapSamples: 16000,
-      mapBrightness: 6,
+      mapSamples: 8000,
+      mapBrightness: 4,
       baseColor: [0.3, 0.3, 0.3],
       markerColor: [0.1, 0.8, 1],
       glowColor: [1, 1, 1],
@@ -38,7 +39,7 @@ export const WhiteGlobe = ({
         // Called on every animation frame.
         // `state` will be an empty object, return updated params.
         state.phi = phi;
-        phi += 0.01;
+        phi += 0.006;
       },
     });
 

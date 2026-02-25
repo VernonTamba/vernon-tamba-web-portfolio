@@ -2,30 +2,30 @@
 
 import { DottedGlowBackground } from "./ui/dotted-glow-background";
 import { SKILLS } from "@/constants/skills";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const Skills = () => {
   return (
     <div
       id="skills"
-      className="min-h-screen w-full flex flex-col items-center justify-center gap-8 relative py-12"
+      className="relative flex min-h-screen w-full flex-col items-center justify-center gap-6 py-20 md:gap-8 md:py-24"
     >
-      <h1 className="text-5xl font-bold text-left md:text-center px-4 mr-auto md:mr-0">
+      <h1 className="mr-auto px-4 text-left text-3xl font-bold sm:text-4xl md:mr-0 md:text-center md:text-5xl">
         Skills & Tools
       </h1>
 
-      <h3 className="text-lg px-4 mr-auto md:mr-0">
+      <h3 className="mr-auto px-4 text-base sm:text-lg md:mr-0">
         Here are the skills and tools I have utilized
       </h3>
 
-      <p className="text-left md:text-justify max-w-4xl px-4 text-neutral-600 dark:text-neutral-400">
+      <p className="max-w-4xl px-4 text-left text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-base md:text-justify">
         Throughout my journey as a front end developer, I have utilized and
         acquired a diverse set of technical skills and tools that enable me to
         create dynamic and responsive web applications, and collaborate with
         other co-workers. These skills and tools include:
       </p>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 px-4 max-w-7xl w-full">
+      <div className="grid w-full max-w-7xl grid-cols-2 gap-4 px-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
         {SKILLS.map((skill) => (
           <SkillCard key={skill.name} skill={skill} />
         ))}
@@ -36,8 +36,10 @@ const Skills = () => {
 
 const SkillCard = ({ skill }: { skill: (typeof SKILLS)[0] }) => {
   const iconRef = useRef<HTMLDivElement>(null);
+  const [isHovering, setIsHovering] = useState(false);
 
   const handleMouseEnter = () => {
+    setIsHovering(true);
     if (iconRef.current) {
       const svgElement = iconRef.current.querySelector("svg");
       if (svgElement) {
@@ -47,6 +49,7 @@ const SkillCard = ({ skill }: { skill: (typeof SKILLS)[0] }) => {
   };
 
   const handleMouseLeave = () => {
+    setIsHovering(false);
     if (iconRef.current) {
       const svgElement = iconRef.current.querySelector("svg");
       if (svgElement) {
@@ -57,7 +60,7 @@ const SkillCard = ({ skill }: { skill: (typeof SKILLS)[0] }) => {
 
   return (
     <div
-      className="group relative flex h-40 w-full flex-col items-end justify-end overflow-hidden rounded-md rounded-tl-3xl rounded-br-3xl rounded-bl-3xl border border-transparent px-4 shadow ring-1 shadow-black/10 ring-black/5 dark:shadow-white/10 dark:ring-white/5 hover:scale-105 transition-transform duration-300"
+      className="group relative flex h-36 w-full flex-col items-end justify-end overflow-hidden rounded-md rounded-tl-3xl rounded-br-3xl rounded-bl-3xl border border-transparent px-4 shadow ring-1 shadow-black/10 ring-black/5 transition-transform duration-300 hover:scale-105 dark:shadow-white/10 dark:ring-white/5 sm:h-40"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -74,19 +77,21 @@ const SkillCard = ({ skill }: { skill: (typeof SKILLS)[0] }) => {
         </p>
       </div>
 
-      <DottedGlowBackground
-        className="pointer-events-none mask-radial-to-90% mask-radial-at-center"
-        opacity={1}
-        gap={8}
-        radius={1.4}
-        colorLightVar="--color-neutral-500"
-        glowColorLightVar="--color-neutral-600"
-        colorDarkVar="--color-neutral-500"
-        glowColorDarkVar="--color-sky-800"
-        backgroundOpacity={0}
-        speedMin={0.3}
-        speedMax={1.6}
-      />
+      {isHovering ? (
+        <DottedGlowBackground
+          className="pointer-events-none mask-radial-to-90% mask-radial-at-center"
+          opacity={1}
+          gap={8}
+          radius={1.4}
+          colorLightVar="--color-neutral-500"
+          glowColorLightVar="--color-neutral-600"
+          colorDarkVar="--color-neutral-500"
+          glowColorDarkVar="--color-sky-800"
+          backgroundOpacity={0}
+          speedMin={0.2}
+          speedMax={0.7}
+        />
+      ) : null}
     </div>
   );
 };

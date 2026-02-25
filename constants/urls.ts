@@ -10,3 +10,5 @@ export const INSTAGRAM_URL = "https://www.instagram.com/bernuntambz/";
 export const LINKEDIN_URL =
   "https://www.linkedin.com/in/vernon-joseph-yeremia-tamba/";
 export const GITHUB_URL = "https://github.com/VernonTamba";
+export const GMAIL_URL = "mailto:vernon.tamba77@gmail.com";
+export const TELEGRAM_URL = "https://t.me/vernontamba";

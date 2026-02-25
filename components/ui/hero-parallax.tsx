@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 import {
   motion,
@@ -119,7 +120,7 @@ export const Header = () => {
       </div>
       <LottiePlayer
         animationPath="programming.json"
-        className="w-100 h-100 mx-auto mb-8 float-right"
+        className="w-100 h-100 mx-auto mb-8 float-right hidden md:block"
       />
     </div>
   );
@@ -136,6 +137,10 @@ export const ProductCard = ({
   };
   translate: MotionValue<number>;
 }) => {
+  const thumbnailSrc = product.thumbnail.startsWith("/")
+    ? product.thumbnail
+    : `/${product.thumbnail}`;
+
   return (
     <motion.div
       style={{
@@ -147,13 +152,19 @@ export const ProductCard = ({
       key={product.title}
       className="group/product h-96 w-[30rem] relative shrink-0"
     >
-      <a href={product.link} className="block group-hover/product:shadow-2xl ">
-        <img
-          src={product.thumbnail}
-          height="600"
-          width="600"
-          className="object-cover object-center absolute h-full w-full inset-0"
+      <a
+        href={product.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block group-hover/product:shadow-2xl "
+      >
+        <Image
+          src={thumbnailSrc}
           alt={product.title}
+          fill
+          loading="lazy"
+          sizes="(max-width: 768px) 100vw, 480px"
+          className="object-cover object-center absolute h-full w-full inset-0"
         />
       </a>
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>

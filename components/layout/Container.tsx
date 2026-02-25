@@ -15,7 +15,7 @@ export default function Container({ children, className }: ContainerProps) {
         className,
       )}
     >
-      <div className="absolute inset-0 overflow-x-hidden pointer-events-none">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <Spotlight xOffset={500} />
       </div>
 

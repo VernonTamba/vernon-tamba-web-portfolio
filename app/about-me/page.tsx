@@ -1,7 +1,17 @@
 import CountUp from "@/components/component/countup";
+import SmoothScrolling from "@/components/smooth-scrolling/SmoothScrolling";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
 import { HeroParallax } from "@/components/ui/hero-parallax";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
+import {
+  FACEBOOK_URL,
+  GITHUB_URL,
+  GMAIL_URL,
+  INSTAGRAM_URL,
+  LINKEDIN_URL,
+  TELEGRAM_URL,
+  WHATSAPP_URL,
+} from "@/constants/urls";
 import { WORK_EXPERIENCE_LIFE } from "@/constants/work-experience";
 import {
   IconCode,
@@ -22,7 +32,6 @@ import {
   IconBrandTelegram,
   IconBrandGmail,
   IconBible,
-  IconUser,
 } from "@tabler/icons-react";
 
 export default function AboutMe() {
@@ -60,237 +69,243 @@ export default function AboutMe() {
     {
       name: "Gmail",
       icon: IconBrandGmail,
-      url: "mailto:youremail", // Replace with your actual profile
+      url: GMAIL_URL,
     },
     {
       name: "Facebook",
       icon: IconBrandFacebook,
-      url: "https://facebook.com/yourprofile", // Replace with your actual profile
+      url: FACEBOOK_URL,
     },
     {
       name: "Instagram",
       icon: IconBrandInstagram,
-      url: "https://instagram.com/yourprofile", // Replace with your actual profile
+      url: INSTAGRAM_URL,
     },
     {
       name: "LinkedIn",
       icon: IconBrandLinkedin,
-      url: "https://linkedin.com/in/yourprofile", // Replace with your actual profile
+      url: LINKEDIN_URL,
     },
     {
       name: "GitHub",
       icon: IconBrandGithub,
-      url: "https://github.com/yourprofile", // Replace with your actual profile
+      url: GITHUB_URL,
     },
     {
       name: "WhatsApp",
       icon: IconBrandWhatsapp,
-      url: "https://wa.me/yourphonenumber", // Replace with your actual phone number
+      url: WHATSAPP_URL,
     },
     {
       name: "Telegram",
       icon: IconBrandTelegram,
-      url: "https://t.me/yourusername", // Replace with your actual username
+      url: TELEGRAM_URL,
     },
   ];
 
   return (
-    <div className="max-w-7xl w-full min-h-dvh pt-40 space-y-15">
-      <div className="flex flex-col justify-center items-center">
-        <h1 className="text-4xl md:text-7xl font-bold text-center">ABOUT ME</h1>
-        <p className="text-neutral-400 my-4 text-xl font-light">
-          More about me here
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
-        <CardSpotlight className="h-full w-full col-start-1">
-          <div className="flex items-center gap-2">
-            <IconBible className="w-6 h-6 text-white" />
-            <p className="text-xl font-bold relative z-20 text-white">
-              Religion
-            </p>
-          </div>
-          <p className="text-neutral-300 mt-4 relative z-20 text-sm">
-            Seventh-Day Adventist
+    <SmoothScrolling>
+      <div className="max-w-7xl w-full min-h-dvh pt-40 space-y-15">
+        <div className="flex flex-col justify-center items-center">
+          <h1 className="text-4xl md:text-7xl font-bold text-center">
+            ABOUT ME
+          </h1>
+          <p className="text-neutral-400 my-4 text-xl font-light">
+            More about me here
           </p>
-        </CardSpotlight>
-
-        <CardSpotlight className="h-full w-full">
-          <div className="flex items-center gap-2">
-            <IconMapPin className="w-6 h-6 text-white" />
-            <p className="text-xl font-bold relative z-20 text-white">
-              Location
-            </p>
-          </div>
-          <p className="text-neutral-300 mt-4 relative z-20 text-sm">
-            Bekasi, Indonesia
-          </p>
-        </CardSpotlight>
-
-        <CardSpotlight className="h-full w-full">
-          <div className="flex items-center gap-2">
-            <IconBriefcase className="w-6 h-6 text-white" />
-            <p className="text-xl font-bold relative z-20 text-white">
-              Profession
-            </p>
-          </div>
-          <p className="text-neutral-300 mt-4 relative z-20 text-sm">
-            Frontend Developer
-          </p>
-        </CardSpotlight>
-
-        <CardSpotlight className="h-full w-full">
-          <div className="flex items-center gap-2">
-            <IconSchool className="w-6 h-6 text-white" />
-            <p className="text-xl font-bold relative z-20 text-white">
-              Education
-            </p>
-          </div>
-          <p className="text-neutral-300 mt-4 relative z-20 text-sm">
-            BS in Information Technology
-          </p>
-        </CardSpotlight>
-
-        <CardSpotlight className="h-full w-full">
-          <div className="flex items-center gap-2">
-            <IconMoodHappyFilled className="w-6 h-6 text-white" />
-            <p className="text-xl font-bold relative z-20 text-white">
-              Hobbies
-            </p>
-          </div>
-          <div className="text-neutral-300 mt-4 relative z-20 text-sm">
-            <ul className="list-none">
-              <Step title="Badminton" />
-              <Step title="Swimming" />
-              <Step title="Football" />
-              <Step title="Music" />
-              <Step title="Movies & Games" />
-            </ul>
-          </div>
-        </CardSpotlight>
-
-        <CardSpotlight className="h-full w-full">
-          <div className="flex items-center gap-2">
-            <IconLanguage className="w-6 h-6 text-white" />
-            <p className="text-xl font-bold relative z-20 text-white">
-              Languages
-            </p>
-          </div>
-          <div className="text-neutral-300 mt-4 relative z-20 text-sm">
-            <ul className="list-none">
-              <Step title="Bahasa Indonesia" />
-              <Step title="English" />
-            </ul>
-          </div>
-        </CardSpotlight>
-
-        <CardSpotlight className="h-full w-full">
-          <div className="flex items-center gap-2">
-            <IconCode className="w-6 h-6 text-white" />
-            <p className="text-xl font-bold relative z-20 text-white">
-              Tech Stack
-            </p>
-          </div>
-          <div className="text-neutral-300 mt-4 relative z-20 text-sm">
-            <ul className="list-none">
-              <Step title="React.js" />
-              <Step title="Next.js" />
-              <Step title="Angular" />
-              <Step title="Wordpress" />
-            </ul>
-          </div>
-        </CardSpotlight>
-
-        <CardSpotlight className="h-full w-full">
-          <div className="flex items-center gap-2">
-            <IconRocket className="w-6 h-6 text-white" />
-            <p className="text-xl font-bold relative z-20 text-white">Status</p>
-          </div>
-          <div className="text-neutral-300 mt-4 relative z-20 text-sm">
-            <ul className="list-none">
-              <Step title="Open to Work" />
-              <Step title="Open to Connect" />
-              <Step title="Open to Opportunities" />
-              <Step title="Open to Grow" />
-            </ul>
-          </div>
-        </CardSpotlight>
-      </div>
-
-      <div className="flex flex-col md:flex-row justify-around items-center gap-20 md:gap-4 mt-25 -mb-10 h-[30dvh] border-t border-b border-white/10">
-        <div className="space-y-2 flex flex-col justify-center items-center gap-2">
-          <CountUp
-            value={1.5}
-            duration={5}
-            decimals={1}
-            suffix="+"
-            icon={<IconCodeCircle2 className="w-8 h-8 mb-2" />}
-            iconPosition="top"
-            className="text-6xl font-bold text-white"
-          />
-          <p>Years of Experience</p>
         </div>
-        <div className="space-y-2 flex flex-col justify-center items-center gap-2">
-          <CountUp
-            value={6}
-            duration={5}
-            decimals={0}
-            suffix="+"
-            icon={<IconAppWindow className="w-8 h-8 mb-2" />}
-            iconPosition="top"
-            className="text-6xl font-bold text-white"
-          />
-          <p>Number of Projects</p>
-        </div>
-        <div className="space-y-2 flex flex-col justify-center items-center gap-2">
-          <CountUp
-            value={0}
-            duration={5}
-            decimals={0}
-            suffix=""
-            icon={<IconCoffee className="w-8 h-8 mb-2" />}
-            iconPosition="top"
-            className="text-6xl font-bold text-white"
-          />
-          <p>Number of Coffees</p>
-        </div>
-      </div>
 
-      <HeroParallax products={WORK_EXPERIENCE_LIFE} />
-
-      <div className="min-h-screen mt-40 flex flex-col justify-center items-center">
-        <TypewriterEffectSmooth className="justify-center" words={words} />
-
-        <footer className="w-full py-12 border-t border-white/10 mt-10">
-          <div className="flex flex-col items-center gap-8">
-            <div className="flex items-center gap-6 md:gap-20">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative"
-                  aria-label={social.name}
-                >
-                  <div className="relative p-3 rounded-full transition-all duration-300 ease-out group-hover:scale-110 group-hover:bg-white/5">
-                    <social.icon
-                      className="w-6 h-6 md:w-10 md:h-10 text-white/70 transition-all duration-300 group-hover:text-white group-hover:scale-110"
-                      strokeWidth={1.5}
-                    />
-                  </div>
-                  {/* Tooltip o n hover */}
-                  <span className="absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-1 bg-white text-black text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
-                    {social.name}
-                  </span>
-                </a>
-              ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+          <CardSpotlight className="h-full w-full col-start-1">
+            <div className="flex items-center gap-2">
+              <IconBible className="w-6 h-6 text-white" />
+              <p className="text-xl font-bold relative z-20 text-white">
+                Religion
+              </p>
             </div>
+            <p className="text-neutral-300 mt-4 relative z-20 text-sm">
+              Seventh-Day Adventist
+            </p>
+          </CardSpotlight>
+
+          <CardSpotlight className="h-full w-full">
+            <div className="flex items-center gap-2">
+              <IconMapPin className="w-6 h-6 text-white" />
+              <p className="text-xl font-bold relative z-20 text-white">
+                Location
+              </p>
+            </div>
+            <p className="text-neutral-300 mt-4 relative z-20 text-sm">
+              Bekasi, Indonesia
+            </p>
+          </CardSpotlight>
+
+          <CardSpotlight className="h-full w-full">
+            <div className="flex items-center gap-2">
+              <IconBriefcase className="w-6 h-6 text-white" />
+              <p className="text-xl font-bold relative z-20 text-white">
+                Profession
+              </p>
+            </div>
+            <p className="text-neutral-300 mt-4 relative z-20 text-sm">
+              Frontend Developer
+            </p>
+          </CardSpotlight>
+
+          <CardSpotlight className="h-full w-full">
+            <div className="flex items-center gap-2">
+              <IconSchool className="w-6 h-6 text-white" />
+              <p className="text-xl font-bold relative z-20 text-white">
+                Education
+              </p>
+            </div>
+            <p className="text-neutral-300 mt-4 relative z-20 text-sm">
+              BS in Information Technology
+            </p>
+          </CardSpotlight>
+
+          <CardSpotlight className="h-full w-full">
+            <div className="flex items-center gap-2">
+              <IconMoodHappyFilled className="w-6 h-6 text-white" />
+              <p className="text-xl font-bold relative z-20 text-white">
+                Hobbies
+              </p>
+            </div>
+            <div className="text-neutral-300 mt-4 relative z-20 text-sm">
+              <ul className="list-none">
+                <Step title="Badminton" />
+                <Step title="Swimming" />
+                <Step title="Football" />
+                <Step title="Music" />
+                <Step title="Movies & Games" />
+              </ul>
+            </div>
+          </CardSpotlight>
+
+          <CardSpotlight className="h-full w-full">
+            <div className="flex items-center gap-2">
+              <IconLanguage className="w-6 h-6 text-white" />
+              <p className="text-xl font-bold relative z-20 text-white">
+                Languages
+              </p>
+            </div>
+            <div className="text-neutral-300 mt-4 relative z-20 text-sm">
+              <ul className="list-none">
+                <Step title="Bahasa Indonesia" />
+                <Step title="English" />
+              </ul>
+            </div>
+          </CardSpotlight>
+
+          <CardSpotlight className="h-full w-full">
+            <div className="flex items-center gap-2">
+              <IconCode className="w-6 h-6 text-white" />
+              <p className="text-xl font-bold relative z-20 text-white">
+                Tech Stack
+              </p>
+            </div>
+            <div className="text-neutral-300 mt-4 relative z-20 text-sm">
+              <ul className="list-none">
+                <Step title="React.js" />
+                <Step title="Next.js" />
+                <Step title="Angular" />
+                <Step title="Wordpress" />
+              </ul>
+            </div>
+          </CardSpotlight>
+
+          <CardSpotlight className="h-full w-full">
+            <div className="flex items-center gap-2">
+              <IconRocket className="w-6 h-6 text-white" />
+              <p className="text-xl font-bold relative z-20 text-white">
+                Status
+              </p>
+            </div>
+            <div className="text-neutral-300 mt-4 relative z-20 text-sm">
+              <ul className="list-none">
+                <Step title="Open to Work" />
+                <Step title="Open to Connect" />
+                <Step title="Open to Opportunities" />
+                <Step title="Open to Grow" />
+              </ul>
+            </div>
+          </CardSpotlight>
+        </div>
+
+        <div className="flex flex-col md:flex-row justify-around items-center md:gap-4 mt-25 -mb-10 h-dvh md:h-[30dvh] border-t border-b border-white/10">
+          <div className="space-y-2 flex flex-col justify-center items-center gap-2">
+            <CountUp
+              value={1.5}
+              duration={5}
+              decimals={1}
+              suffix="+"
+              icon={<IconCodeCircle2 className="w-8 h-8 mb-2" />}
+              iconPosition="top"
+              className="text-6xl font-bold text-white"
+            />
+            <p>Years of Experience</p>
           </div>
-        </footer>
+          <div className="space-y-2 flex flex-col justify-center items-center gap-2">
+            <CountUp
+              value={6}
+              duration={5}
+              decimals={0}
+              suffix="+"
+              icon={<IconAppWindow className="w-8 h-8 mb-2" />}
+              iconPosition="top"
+              className="text-6xl font-bold text-white"
+            />
+            <p>Number of Projects</p>
+          </div>
+          <div className="space-y-2 flex flex-col justify-center items-center gap-2">
+            <CountUp
+              value={0}
+              duration={5}
+              decimals={0}
+              suffix=""
+              icon={<IconCoffee className="w-8 h-8 mb-2" />}
+              iconPosition="top"
+              className="text-6xl font-bold text-white"
+            />
+            <p>Number of Coffees</p>
+          </div>
+        </div>
+
+        <HeroParallax products={WORK_EXPERIENCE_LIFE} />
+
+        <div className="min-h-screen mt-40 flex flex-col justify-center items-center">
+          <TypewriterEffectSmooth className="justify-center" words={words} />
+
+          <footer className="w-full py-12 border-t border-white/10 md:mt-10">
+            <div className="flex flex-col items-center gap-8">
+              <div className="flex justify-center items-center flex-wrap gap-6 md:gap-20">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative"
+                    aria-label={social.name}
+                  >
+                    <div className="relative p-3 rounded-full transition-all duration-300 ease-out group-hover:scale-110 group-hover:bg-white/5">
+                      <social.icon
+                        className="w-6 h-6 md:w-10 md:h-10 text-white/70 transition-all duration-300 group-hover:text-white group-hover:scale-110"
+                        strokeWidth={1.5}
+                      />
+                    </div>
+                    {/* Tooltip o n hover */}
+                    <span className="absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-1 bg-white text-black text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+                      {social.name}
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </footer>
+        </div>
       </div>
-    </div>
+    </SmoothScrolling>
   );
 }
 

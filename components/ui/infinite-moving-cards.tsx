@@ -21,6 +21,7 @@ export const InfiniteMovingCards = ({
 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
+  const didDuplicateRef = React.useRef(false);
   const [start, setStart] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -29,6 +30,7 @@ export const InfiniteMovingCards = ({
   }, []);
 
   function addAnimation() {
+    if (didDuplicateRef.current) return;
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
 
@@ -42,6 +44,7 @@ export const InfiniteMovingCards = ({
       getDirection();
       getSpeed();
       setStart(true);
+      didDuplicateRef.current = true;
     }
   }
 

@@ -4,16 +4,24 @@ import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import dynamic from "next/dynamic";
+import { useEffect, useRef, useState } from "react";
 
-import { WhiteGlobe } from "./component/globe-white";
 import { SiGmail } from "react-icons/si";
 import { LinkPreview } from "./ui/link-preview";
 import { SOCIAL_MEDIA } from "@/constants/social-media";
 import { Snackbar, SnackbarType } from "@/components/component/snackbar";
 import { Spinner } from "@/components/component/spinner";
 
+const WhiteGlobe = dynamic(
+  () => import("./component/globe-white").then((module) => module.WhiteGlobe),
+  {
+    ssr: false,
+  },
+);
+
 const GetInTouch = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -29,6 +37,42 @@ const GetInTouch = () => {
     message: "",
     type: "success",
   });
+  const [isDesktopViewport, setIsDesktopViewport] = useState<boolean | null>(
+    null,
+  );
+  const [isGlobeVisible, setIsGlobeVisible] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+
+    const updateViewport = () => {
+      setIsDesktopViewport(mediaQuery.matches);
+    };
+
+    updateViewport();
+    mediaQuery.addEventListener("change", updateViewport);
+
+    return () => {
+      mediaQuery.removeEventListener("change", updateViewport);
+    };
+  }, []);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsGlobeVisible(entry.isIntersecting);
+      },
+      {
+        rootMargin: "200px 0px",
+      },
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
 
   const showSnackbar = (message: string, type: SnackbarType) => {
     setSnackbar({
@@ -76,7 +120,7 @@ const GetInTouch = () => {
       } else {
         throw new Error("Failed to send");
       }
-    } catch (error) {
+    } catch (_error) {
       showSnackbar(
         "Failed to send message. Please try again or contact me directly. 😔",
         "error",
@@ -98,29 +142,29 @@ const GetInTouch = () => {
 
       <div
         id="get-in-touch"
-        className="py-20 w-full flex flex-col items-center justify-center gap-10"
+        ref={sectionRef}
+        className="flex w-full flex-col items-center justify-center gap-8 py-20 md:gap-10 md:py-24"
       >
-        <h1 className="text-5xl font-bold text-left md:text-center px-4 mr-auto md:mr-0">
+        <h1 className="mr-auto px-4 text-left text-3xl font-bold sm:text-4xl md:mr-0 md:text-center md:text-5xl">
           Get In Touch
         </h1>
 
-        <h3 className="text-lg px-4 mr-auto md:mr-0">
+        <h3 className="mr-auto px-4 text-base sm:text-lg md:mr-0">
           Wherever you are in the world, let's connect and work together!
         </h3>
 
-        <p className="text-left md:text-justify max-w-4xl px-4 text-neutral-600 dark:text-neutral-400 mb-8">
+        <p className="mb-6 max-w-4xl px-4 text-left text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-base md:mb-8 md:text-justify">
           Hello world! I am excited to collaborate, work and learn from other
           developers out there! Feel free to reach out to me for any project
           ideas, opportunities, or just to say hello. I'd really appreciate it!
         </p>
 
-        <div className="relative flex flex-col md:flex-row justify-center items-stretch gap-4 w-full max-w-7xl mx-auto">
-          {/* Left Form */}
-          <div className="shadow-input mx-auto w-full max-w-md rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-black/50 hover:dark:bg-black/90 transition duration-500 relative z-10">
+        <div className="relative mx-auto flex w-full max-w-7xl flex-col items-stretch justify-center gap-6 px-4 sm:px-6 lg:flex-row">
+          <div className="shadow-input relative z-10 mx-auto w-full max-w-md rounded-2xl bg-white p-5 transition duration-500 hover:dark:bg-black/90 dark:bg-black/50 sm:p-6 md:p-8">
             <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
               Send Me A Message
             </h2>
-            <p className="mt-2 max-w-sm text-sm text-neutral-600 dark:text-neutral-300">
+            <p className="mt-2 max-w-sm text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
               Enter your details and message, and I will definitely read your
               message and feedback! Positive vibes only! &#128522;
             </p>
@@ -187,34 +231,43 @@ const GetInTouch = () => {
             </form>
           </div>
 
-          {/* Globe - Centered between both divs */}
-          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 hidden md:block pointer-events-none">
-            <WhiteGlobe size={500} />
-          </div>
+          {isDesktopViewport ? (
+            <div className="pointer-events-none absolute left-1/2 top-1/2 z-0 hidden -translate-x-1/2 -translate-y-1/2 transform lg:block">
+              {isGlobeVisible ? (
+                <WhiteGlobe size={500} />
+              ) : (
+                <div className="h-[500px] w-[500px]" />
+              )}
+            </div>
+          ) : null}
 
-          {/* Mobile Globe - shows below on small screens */}
-          <div className="md:hidden w-full flex justify-center">
-            <WhiteGlobe size={300} />
-          </div>
+          {isDesktopViewport === false ? (
+            <div className="flex w-full justify-center lg:hidden">
+              {isGlobeVisible ? (
+                <WhiteGlobe size={300} />
+              ) : (
+                <div className="h-[300px] w-[300px]" />
+              )}
+            </div>
+          ) : null}
 
-          {/* Right Social Media Section */}
-          <div className="shadow-input mx-auto w-full max-w-md rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-black/50 hover:dark:bg-black/90 transition duration-500 relative z-10">
+          <div className="shadow-input relative z-10 mx-auto w-full max-w-md rounded-2xl bg-white p-5 transition duration-500 hover:dark:bg-black/90 dark:bg-black/50 sm:p-6 md:p-8">
             <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
               Connect With Me
             </h2>
-            <p className="mt-2 max-w-sm text-sm text-neutral-600 dark:text-neutral-300 mb-12">
+            <p className="mb-10 mt-2 max-w-sm text-sm leading-relaxed text-neutral-600 dark:text-neutral-300 md:mb-12">
               Feel free to connect with me on social media! I am always open to
               new connections and friends. &#129309;
             </p>
-            <div className="flex flex-col gap-12">
+            <div className="flex flex-col gap-8 md:gap-10">
               {SOCIAL_MEDIA.map((socialMedia) => (
                 <LinkPreview
                   url={socialMedia.url}
                   key={socialMedia.title}
                   imageSrc={socialMedia.imageSrc}
-                  width={250}
-                  height={250}
-                  className="text-base font-normal flex items-center gap-4"
+                  width={220}
+                  height={220}
+                  className="flex w-full items-center gap-4 break-words text-base font-normal"
                   isStatic
                 >
                   {socialMedia.icon}

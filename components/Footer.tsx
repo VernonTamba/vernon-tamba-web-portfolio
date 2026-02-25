@@ -14,24 +14,24 @@ const Footer = () => {
     "Arigato",
     "Grazie",
     "Obrigado",
-    "Спасибо",
-    "謝謝",
-    "ありがとう",
+    "Spasibo",
+    "Xie Xie",
+    "Arigatou",
   ];
 
   return (
     <div
-      id="#about-me"
-      className="min-h-screen md:h-screen w-full flex flex-col items-center justify-center gap-8 relative overflow-hidden"
+      id="footer"
+      className="relative flex min-h-screen w-full flex-col items-center justify-center gap-6 overflow-hidden py-20 md:gap-8 md:py-24"
     >
       <FlipWords
         words={words}
         duration={1000}
-        className="font-extrabold text-4xl md:text-[150px] text-center"
-      />{" "}
-      <p className="text-xs md:text-base mx-auto pt-10 font-light">
+        className="text-center text-4xl font-extrabold leading-tight sm:text-6xl md:text-7xl lg:text-8xl xl:text-[150px]"
+      />
+      <p className="mx-auto pt-10 text-xs font-light sm:text-sm md:text-base">
         <EncryptedText
-          text={`Copyright © ${currentYear} Vernon Tamba`}
+          text={`Copyright (c) ${currentYear} Vernon Tamba`}
           encryptedClassName="text-neutral-500"
           revealedClassName="dark:text-white text-black"
           revealDelayMs={50}

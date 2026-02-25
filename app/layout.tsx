@@ -4,7 +4,6 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/provider/theme-provider";
 import Container from "@/components/layout/Container";
 import { cn } from "@/lib/utils";
-import SmoothScrolling from "@/components/smooth-scrolling/SmoothScrolling";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { FLOATING_NAV_ITEMS } from "@/constants/navigations";
 import { ViewTransitions } from "next-view-transitions";
@@ -36,20 +35,18 @@ export default function RootLayout({
         )}
       >
         <ViewTransitions>
-          <SmoothScrolling>
-            <ThemeProvider
-              attribute="class"
-              defaultTheme="dark"
-              enableSystem
-              disableTransitionOnChange
-            >
-              <FloatingNav navItems={FLOATING_NAV_ITEMS} />
-              <Container>{children}</Container>
-            </ThemeProvider>
-          </SmoothScrolling>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <FloatingNav navItems={FLOATING_NAV_ITEMS} />
+            <Container>{children}</Container>
+          </ThemeProvider>
         </ViewTransitions>
+        {gaId ? <GoogleAnalytics gaId={gaId} /> : null}
       </body>
-      {gaId ? <GoogleAnalytics gaId={gaId} /> : null}
     </html>
   );
 }

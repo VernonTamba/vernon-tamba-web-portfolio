@@ -5,9 +5,25 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
   images: {
-    domains: [
-      "api.microlink.io", // Microlink Image Preview
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "api.microlink.io",
+      },
+      {
+        protocol: "https",
+        hostname: "www.lawencon.com",
+      },
+      {
+        protocol: "https",
+        hostname: "aupcollegeofnursing.wordpress.com",
+      },
+      {
+        protocol: "https",
+        hostname: "www.aiias.edu",
+      },
     ],
+    formats: ["image/avif", "image/webp"],
   },
 };
 
