@@ -14,14 +14,13 @@ const Projects = () => {
       </h1>
 
       <h3 className="mr-auto px-4 text-base sm:text-lg md:mr-0">
-        Here are the projects I have been involved in
+        Projects I have worked on
       </h3>
 
       <p className="max-w-4xl px-4 text-left text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-base md:text-justify">
-        Throughout my journey as a front end developer, I have worked on various
-        projects that showcase my skills and expertise in web development. Here
-        are some of the notable projects I have contributed to, demonstrating my
-        ability to create dynamic and responsive web applications:
+        Here are some projects I have contributed to during my frontend
+        journey. Each one helped me practice building responsive,
+        user-friendly interfaces in real-world environments.
       </p>
 
       <div className="flex flex-wrap items-center justify-center gap-y-10 gap-x-2 px-4">

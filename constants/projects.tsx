@@ -11,7 +11,7 @@ export const PROJECTS = [
     title: "Qlola by BRI",
     company: "Bank Rakyat Indonesia",
     description:
-      "An integrated corporate portal designed to streamline banking operations through a single-sign-on ecosystem for wholesale and retail business clients.",
+      "A corporate banking portal where I helped build web features that support daily business transactions.",
     image: QlolaImg,
     technologies: [
       {
@@ -63,7 +63,7 @@ export const PROJECTS = [
     title: "Kopra by Mandiri",
     company: "Bank Mandiri",
     description:
-      "A comprehensive digital ecosystem that centralizes wholesale banking services, empowering corporate entities with seamless liquidity and supply chain management.",
+      "A digital banking platform for corporate services where I contributed to frontend features used in daily operations.",
     image: KopraImg,
     technologies: [
       {
@@ -109,7 +109,7 @@ export const PROJECTS = [
     title: "AI Interview",
     company: "Adi Data Informatika",
     description:
-      "An automated recruitment tool leveraging AI to evaluate candidate responses, significantly reducing time-to-hire through intelligent screening and sentiment analysis.",
+      "An internal recruitment web app that helps teams review candidate responses more efficiently.",
     image: AIInterviewImg,
     technologies: [
       {
@@ -143,7 +143,7 @@ export const PROJECTS = [
     title: "Human Resource Management",
     company: "Adi Data Informatika",
     description:
-      "A robust internal platform built to centralize employee lifecycles, from attendance and payroll to performance tracking and organizational growth.",
+      "An internal HR platform for handling employee data and everyday HR processes.",
     image: HRManagementImg,
     technologies: [
       {
@@ -177,7 +177,7 @@ export const PROJECTS = [
     title: "LinovHR",
     company: "Lawencon International",
     description:
-      "A full-suite Human Capital Management system designed to digitize end-to-end HR processes for enterprises, focusing on compliance and administrative agility.",
+      "An HR management web platform where I contributed to frontend modules and interface improvements.",
     image: LinovHRImg,
     technologies: [
       {
@@ -211,7 +211,7 @@ export const PROJECTS = [
     title: "Document Management System",
     company: "Lawencon International",
     description:
-      "A secure digital repository for corporate documentation featuring advanced version control, automated approval workflows, and high-level data encryption.",
+      "An internal document management web app for storing, viewing, and organizing company files.",
     image: DMSImg,
     technologies: [
       {

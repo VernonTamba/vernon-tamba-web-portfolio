@@ -5,18 +5,28 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const words = [
-    "Thank You",
-    "Terima Kasih",
-    "Salamat Po",
-    "Gracias",
-    "Merci",
-    "Danke",
-    "Arigato",
-    "Grazie",
-    "Obrigado",
-    "Spasibo",
-    "Xie Xie",
-    "Arigatou",
+    "Thank You", // English
+    "Terima kasih", // Indonesian
+    "Salamat po", // Filipino (polite)
+    "Gracias", // Spanish
+    "Merci", // French
+    "Danke", // German
+    "ありがとう", // Japanese (Arigatou)
+    "谢谢", // Mandarin (Simplified Chinese)
+    "고마워요", // Korean (casual polite)
+    "Grazie", // Italian
+    "Obrigado", // Portuguese (male speaker)
+    "Спасибо", // Russian
+    "شكراً", // Arabic
+    "धन्यवाद", // Hindi
+    "ขอบคุณ", // Thai
+    "Cảm ơn", // Vietnamese
+    "Teşekkür ederim", // Turkish
+    "Ευχαριστώ", // Greek
+    "תודה", // Hebrew
+    "Dziękuję", // Polish
+    "Tack", // Swedish
+    "Dank je", // Dutch
   ];
 
   return (
@@ -31,7 +41,7 @@ const Footer = () => {
       />
       <p className="mx-auto pt-10 text-xs font-light sm:text-sm md:text-base">
         <EncryptedText
-          text={`Copyright (c) ${currentYear} Vernon Tamba`}
+          text={`Copyright © ${currentYear} Vernon Tamba`}
           encryptedClassName="text-neutral-500"
           revealedClassName="dark:text-white text-black"
           revealDelayMs={50}

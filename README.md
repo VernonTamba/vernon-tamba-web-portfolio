@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vernon Tamba Web Portfolio
 
-## Getting Started
+Live website: **https://vernontamba.com**
 
-First, run the development server:
+This project is my personal portfolio website.
+I built it to introduce myself, share my work, and keep doing what I genuinely enjoy: creating websites as a frontend developer.
+
+## Why I Made This
+
+I wanted one place where people can quickly understand:
+
+- who I am,
+- what I have worked on,
+- what I can build,
+- and how to reach me.
+
+This portfolio is not about showing off. It is about being real, sharing my journey, and continuing to grow through each project I build.
+
+## What You Can Explore
+
+3 main pages or routes: /home, /about-me, /credits
+Note: Accessible through navigation bar on the top (you need to slide down and up to trigger the floating navbar)
+
+HOME:
+- `Home` - a short introduction and my frontend focus.
+- `About Me` - a simple story about my background and mindset.
+- `Work Experience` and `Education` - my learning and professional journey.
+- `Skills` - tools and technologies I use in frontend development.
+- `Projects` - selected work with context and tech stack.
+- `Get In Touch` - a contact form for collaboration or conversation.
+
+ABOUT ME:
+More about my information and journey
+
+CREDITS:
+About who inspired me to build this and where the design ideas came from, and also the technologies used for this web portfolio
+
+## Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Motion/animation and 3D UI libraries
+- Aceternity UI
+
+## Run Locally
+
+### 1. Install dependencies
+
+```bash
+npm install
+```
+
+### 2. Start development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. Open in browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Visit [http://localhost:3000](http://localhost:3000)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment Variables (Optional)
 
-## Learn More
+If you want the contact form email feature to work locally, add this to `.env.local`:
 
-To learn more about Next.js, take a look at the following resources:
+```env
+RESEND_API_KEY=your_resend_api_key
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run dev     # Run local development server
+npm run build   # Build for production
+npm run start   # Start production server
+npm run lint    # Check code style with Biome
+npm run format  # Format code with Biome
+```
 
-## Deploy on Vercel
+## Visit the Portfolio
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+If you want to see the live version, visit:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**https://vernontamba.com**
+
+Thank you for stopping by.
+
+Do not have a good day. Have a great day! 😁🔥

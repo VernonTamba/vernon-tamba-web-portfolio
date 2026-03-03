@@ -10,18 +10,6 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "api.microlink.io",
       },
-      {
-        protocol: "https",
-        hostname: "www.lawencon.com",
-      },
-      {
-        protocol: "https",
-        hostname: "aupcollegeofnursing.wordpress.com",
-      },
-      {
-        protocol: "https",
-        hostname: "www.aiias.edu",
-      },
     ],
     formats: ["image/avif", "image/webp"],
   },

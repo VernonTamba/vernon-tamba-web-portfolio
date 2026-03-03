@@ -33,10 +33,9 @@ const Hero = () => {
           <span className="font-semibold text-neutral-900 dark:text-neutral-100">
             Frontend Developer
           </span>{" "}
-          who enjoys turning ideas into clean, responsive, and user-focused web
-          experiences. While my professional journey is still growing, I’m
-          continuously learning, building projects, and refining my skills to
-          become a better developer every day.
+          who enjoys turning ideas into clean, responsive, and user-friendly
+          websites. I am still growing in my career, and I stay excited to keep
+          learning, building, and improving step by step.
         </p>
 
         <MagicButton className="my-8 w-full sm:w-fit" href="#projects" />

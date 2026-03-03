@@ -113,7 +113,7 @@ const GetInTouch = () => {
 
       if (response.ok) {
         showSnackbar(
-          "Message sent successfully! Thanks for reaching out. I will get back to you soon. 🚀",
+          "Message sent successfully. Thanks for reaching out. I will get back to you soon.",
           "success",
         );
         setFormData({ name: "", email: "", message: "" });
@@ -122,7 +122,7 @@ const GetInTouch = () => {
       }
     } catch (_error) {
       showSnackbar(
-        "Failed to send message. Please try again or contact me directly. 😔",
+        "I could not send your message right now. Please try again or contact me directly.",
         "error",
       );
     } finally {
@@ -150,13 +150,13 @@ const GetInTouch = () => {
         </h1>
 
         <h3 className="mr-auto px-4 text-base sm:text-lg md:mr-0">
-          Wherever you are in the world, let's connect and work together!
+          Wherever you are, I am happy to connect.
         </h3>
 
         <p className="mb-6 max-w-4xl px-4 text-left text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-base md:mb-8 md:text-justify">
-          Hello world! I am excited to collaborate, work and learn from other
-          developers out there! Feel free to reach out to me for any project
-          ideas, opportunities, or just to say hello. I'd really appreciate it!
+          I enjoy connecting with other developers and people who love building
+          for the web. If you have a project idea, an opportunity, or just want
+          to say hello, feel free to send a message.
         </p>
 
         <div className="relative mx-auto flex w-full max-w-7xl flex-col items-stretch justify-center gap-6 px-4 sm:px-6 lg:flex-row">
@@ -165,8 +165,8 @@ const GetInTouch = () => {
               Send Me A Message
             </h2>
             <p className="mt-2 max-w-sm text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
-              Enter your details and message, and I will definitely read your
-              message and feedback! Positive vibes only! &#128522;
+              Share your details and message here. I read every message and
+              feedback with appreciation.
             </p>
 
             <form className="my-8" onSubmit={handleSubmit}>
@@ -256,8 +256,8 @@ const GetInTouch = () => {
               Connect With Me
             </h2>
             <p className="mb-10 mt-2 max-w-sm text-sm leading-relaxed text-neutral-600 dark:text-neutral-300 md:mb-12">
-              Feel free to connect with me on social media! I am always open to
-              new connections and friends. &#129309;
+              You can also find me on social media. I am always open to
+              meaningful connections.
             </p>
             <div className="flex flex-col gap-8 md:gap-10">
               {SOCIAL_MEDIA.map((socialMedia) => (

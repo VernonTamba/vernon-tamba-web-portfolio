@@ -12,23 +12,22 @@ const AboutMe = () => {
       </h1>
 
       <h3 className="mr-auto px-4 text-base sm:text-lg md:mr-0">
-        Here is a little bit about me
+        A little introduction about who I am
       </h3>
 
       <p className="max-w-4xl px-4 text-left text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-base md:text-justify">
-        I'm a frontend developer with expertise in creating modern web
-        applications using React, Next.js, and TypeScript. I enjoy solving
-        complex problems and building intuitive user experiences. I'm always
-        eager to learn and stay up-to-date with the latest trends and
-        technologies in the industry.
+        I am a frontend developer who enjoys building modern web interfaces
+        using React, Next.js, Angular, and WordPress. I focus on creating
+        websites that are clean, responsive, and easy to use. I enjoy solving
+        problems and building intuitive user experiences. I'm always eager to
+        learn and stay up-to-date with the latest trends and technologies in the
+        industry.
       </p>
 
       <p className="max-w-4xl px-4 text-left text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-base md:text-justify">
-        Throughout my journey as a developer, I've had the opportunity to work
-        on diverse projects that have challenged and honed my skills. From
-        building responsive websites to developing interactive web applications,
-        I've gained valuable experience in delivering high-quality solutions
-        that meet client needs.
+        My journey so far has given me opportunities to work on different
+        projects and collaborate with different teams. Each project helps me
+        improve my communication, technical skills, and attention to detail.
       </p>
 
       <InfiniteMovingCards

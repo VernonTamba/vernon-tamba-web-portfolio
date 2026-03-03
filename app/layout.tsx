@@ -1,22 +1,55 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/provider/theme-provider";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { ViewTransitions } from "next-view-transitions";
 import Container from "@/components/layout/Container";
-import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/provider/theme-provider";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { FLOATING_NAV_ITEMS } from "@/constants/navigations";
-import { ViewTransitions } from "next-view-transitions";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { cn } from "@/lib/utils";
 
 const inter = Inter({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://vernontamba.com";
+const siteTitle = "Vernon Tamba | Frontend Developer Portfolio";
+const siteDescription =
+  "A personal web portfolio by Vernon Tamba. Explore projects, skills, experience, and ways to get in touch.";
+
 export const metadata: Metadata = {
-  title: "Vernon's Portfolio",
-  description:
-    "Welcome to Vernon's personal portfolio website, showcasing projects, skills, and experiences in web development and design.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: siteTitle,
+    template: "%s | Vernon Tamba",
+  },
+  description: siteDescription,
+  applicationName: "Vernon Tamba Portfolio",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    title: siteTitle,
+    description: siteDescription,
+    siteName: "Vernon Tamba Portfolio",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Vernon Tamba portfolio preview card",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function RootLayout({

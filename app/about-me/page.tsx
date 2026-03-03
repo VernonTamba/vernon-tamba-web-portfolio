@@ -43,22 +43,22 @@ export default function AboutMe() {
       text: "is",
     },
     {
-      text: "about",
+      text: "my",
     },
     {
-      text: "me.",
+      text: "story.",
     },
     {
-      text: "What",
+      text: "I",
     },
     {
-      text: "about",
+      text: "hope",
     },
     {
-      text: "you?",
+      text: "we",
     },
     {
-      text: "Let's",
+      text: "can",
     },
     {
       text: "connect!",
@@ -111,7 +111,7 @@ export default function AboutMe() {
             ABOUT ME
           </h1>
           <p className="text-neutral-400 my-4 text-xl font-light">
-            More about me here
+            A simple introduction about me
           </p>
         </div>
 
@@ -209,7 +209,7 @@ export default function AboutMe() {
                 <Step title="React.js" />
                 <Step title="Next.js" />
                 <Step title="Angular" />
-                <Step title="Wordpress" />
+                <Step title="WordPress" />
               </ul>
             </div>
           </CardSpotlight>

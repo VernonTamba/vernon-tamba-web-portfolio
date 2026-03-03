@@ -15,14 +15,13 @@ const Skills = () => {
       </h1>
 
       <h3 className="mr-auto px-4 text-base sm:text-lg md:mr-0">
-        Here are the skills and tools I have utilized
+        Skills and tools I use in my work
       </h3>
 
       <p className="max-w-4xl px-4 text-left text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-base md:text-justify">
-        Throughout my journey as a front end developer, I have utilized and
-        acquired a diverse set of technical skills and tools that enable me to
-        create dynamic and responsive web applications, and collaborate with
-        other co-workers. These skills and tools include:
+        These are the skills and tools I use when building web applications
+        and collaborating with teams. I keep learning and improving them
+        through day-to-day work and personal projects.
       </p>
 
       <div className="grid w-full max-w-7xl grid-cols-2 gap-4 px-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">

@@ -16,7 +16,7 @@ export default function Credits() {
             CREDITS
           </h1>
           <p className="text-neutral-400 my-4 text-xl font-light">
-            The reason why this portfolio exists
+            The people and resources behind this portfolio
           </p>
         </div>
 
@@ -38,8 +38,8 @@ export default function Credits() {
                 translateZ="60"
                 className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
               >
-                The React Framework for the Web. Used by some of the world's
-                largest companies.
+                The React framework I used to build and structure this
+                portfolio.
               </CardItem>
               <CardItem translateZ="100" className="w-full mt-4">
                 <Image
@@ -60,7 +60,7 @@ export default function Credits() {
                   target="_blank"
                   className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
                 >
-                  Learn more →
+                  Learn more
                 </CardItem>
                 <CardItem
                   translateZ={20}
@@ -88,8 +88,8 @@ export default function Credits() {
                 translateZ="60"
                 className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
               >
-                Beautiful Tailwind CSS and Framer Motion components for modern
-                web applications.
+                A UI component library that helped me build interactions and
+                visuals faster.
               </CardItem>
               <CardItem translateZ="100" className="w-full mt-4">
                 <Image
@@ -110,7 +110,7 @@ export default function Credits() {
                   target="_blank"
                   className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
                 >
-                  Explore →
+                  Explore
                 </CardItem>
                 <CardItem
                   translateZ={20}
@@ -170,8 +170,11 @@ export default function Credits() {
         </div>
 
         <p className="text-neutral-400 my-4 text-xl md:text-4xl text-center mt-20 font-extralight tracking-widest">
-          FOR THEM, BIG THANK YOU FOR THE INSPIRATION AND HELP! <br /> FOR YOU,
-          DON'T HAVE A GOOD DAY. HAVE A GREAT DAY!
+          Big thanks to these creators for the inspiration and guidance.
+          <br />
+          And to you, thank you for visiting my portfolio.
+          <br />
+          Don't have a good day. Have a great day!
         </p>
         <LottiePlayer
           animationPath="fist-bump.json"

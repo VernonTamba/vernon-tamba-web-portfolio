@@ -12,19 +12,17 @@ const WorkExperience = () => {
       </h1>
 
       <h3 className="mr-auto px-4 text-base sm:text-lg md:mr-0">
-        Here is my professional journey so far
+        A look at my professional journey so far
       </h3>
 
       <p className="max-w-4xl px-4 text-left text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-base md:text-justify">
-        Throughout my ongoing journey as a frontend developer for almost two
-        years, I have had the privilege of working with esteemed organizations
-        and teams. Starting from Human Resource and Banking industries. I am
-        excited by the opportunities and challenges that lie ahead in other
-        industries. I am personally aiming and interested in Oil and Gas
-        industry if I can get the chance &#129310;&#128513;. Nevertheless, these
-        experiences have allowed me to contribute to impactful projects,
-        collaborate with talented teams, and further refine my skills in
-        building exceptional web applications.
+        Over the past 1.5+ years, I have worked with teams in the HR and banking
+        industries. Actually, I have set my eyes to Oil and Gas industry.
+        Hopefully, in the near future, I will have that opportunity.
+        Nonetheless, I am excited for other industries within which I can
+        explore and learn from. These experiences helped me build practical web
+        features, collaborate with cross-functional teams, and continue growing
+        as a frontend developer.
       </p>
 
       <div className="relative w-full">

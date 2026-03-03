@@ -15,21 +15,17 @@ const Education = () => {
       </h1>
 
       <h3 className="mr-auto px-4 text-base sm:text-lg md:mr-0">
-        Here is my educational background so far
+        My learning journey so far
       </h3>
 
       <p className="max-w-4xl px-4 text-left text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-base md:text-justify">
-        I completed my education at Adventist International Institute of
-        Advanced Studies (AIIAS) Academy graduated on 2019. Following that, I
-        pursued a Bachelor's degree in Information Technology at the same
-        institution, where I graduated in 2023 with honors at Adventist
-        University of the Philippines (AUP) . After earning my degree, I
-        continued to enhance my skills by enrolling in a Full-Stack Web
-        Development bootcamp program at Lawencon International, which I
-        completed in the start of 2024. These educational experiences have
-        equipped me with a solid foundation in IT and web development.
-        Nonetheless, I am committed to continuous learning and growth in my
-        field.
+        I completed senior high school at Adventist International Institute of
+        Advanced Studies (AIIAS) Academy in 2019. I then earned my Bachelor's
+        degree in Information Technology from Adventist University of the
+        Philippines (AUP) in 2023, graduating with honors. In early 2024, I
+        completed a Full-Stack Web Development bootcamp at Lawencon
+        International. These experiences gave me a strong foundation and
+        strengthened my commitment to continuous learning.
       </p>
 
       <TracingBeam>
