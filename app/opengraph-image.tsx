@@ -15,62 +15,45 @@ export default function OpenGraphImage() {
         height: "100%",
         width: "100%",
         display: "flex",
-        position: "relative",
-        background:
-          "radial-gradient(circle at 20% 20%, #1f2937 0%, #09090b 50%, #020617 100%)",
-        color: "#f5f5f5",
-        fontFamily: "Inter, Arial, sans-serif",
-        padding: "56px",
         flexDirection: "column",
         justifyContent: "space-between",
+        backgroundColor: "#0b1220",
+        color: "#f8fafc",
+        fontFamily: "Inter, Arial, sans-serif",
+        padding: "64px",
       }}
     >
-      <div
-        style={{
-          position: "absolute",
-          top: 24,
-          right: 24,
-          height: 180,
-          width: 180,
-          borderRadius: "999px",
-          border: "1px solid rgba(255,255,255,0.15)",
-          background:
-            "radial-gradient(circle, rgba(34,211,238,0.24) 0%, rgba(59,130,246,0.15) 40%, rgba(0,0,0,0) 72%)",
-        }}
-      />
-
-      <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
+      <div style={{ display: "flex", flexDirection: "column" }}>
         <div
           style={{
             display: "inline-flex",
             width: "fit-content",
-            border: "1px solid rgba(255,255,255,0.25)",
-            borderRadius: 999,
-            padding: "10px 20px",
-            fontSize: 22,
-            letterSpacing: 0.2,
-            color: "#d4d4d8",
+            padding: "8px 16px",
+            fontSize: 24,
+            color: "#93c5fd",
+            border: "1px solid #1e293b",
           }}
         >
           vernontamba.com
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+        <div
+          style={{ display: "flex", flexDirection: "column", marginTop: 20 }}
+        >
           <h1
             style={{
               margin: 0,
-              fontSize: 82,
-              lineHeight: 1.02,
-              fontWeight: 800,
-              letterSpacing: -1.2,
+              fontSize: 92,
+              lineHeight: 1.05,
+              fontWeight: 700,
             }}
           >
             Vernon Tamba
           </h1>
           <p
             style={{
-              margin: 0,
-              fontSize: 38,
+              margin: "12px 0 0 0",
+              fontSize: 40,
               lineHeight: 1.2,
               color: "#67e8f9",
               fontWeight: 600,
@@ -84,12 +67,18 @@ export default function OpenGraphImage() {
       <div
         style={{
           width: "100%",
+          height: 2,
+          backgroundColor: "#1e293b",
+        }}
+      />
+
+      <div
+        style={{
+          width: "100%",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          borderTop: "1px solid rgba(255,255,255,0.15)",
-          paddingTop: 24,
-          gap: 20,
+          gap: 24,
         }}
       >
         <p
@@ -97,22 +86,21 @@ export default function OpenGraphImage() {
             margin: 0,
             fontSize: 30,
             lineHeight: 1.25,
-            color: "#e4e4e7",
-            maxWidth: "85%",
+            color: "#cbd5e1",
+            maxWidth: "70%",
           }}
         >
-          Personal portfolio with projects, skills, and experience.
+          Projects, skills, and experience in one place.
         </p>
         <div
           style={{
             display: "flex",
-            width: 14,
-            height: 14,
-            borderRadius: "999px",
-            backgroundColor: "#22d3ee",
-            boxShadow: "0 0 20px rgba(34,211,238,0.75)",
+            fontSize: 24,
+            color: "#67e8f9",
           }}
-        />
+        >
+          Visit: vernontamba.com
+        </div>
       </div>
     </div>,
     {
