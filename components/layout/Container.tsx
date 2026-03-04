@@ -11,7 +11,7 @@ export default function Container({ children, className }: ContainerProps) {
   return (
     <main
       className={cn(
-        "relative flex justify-center items-center flex-col mx-auto px-5 md:px-10 ",
+        "relative flex justify-center items-center flex-col mx-auto px-5 md:px-10 overflow-x-hidden",
         className,
       )}
     >

@@ -35,20 +35,11 @@ export const metadata: Metadata = {
     title: siteTitle,
     description: siteDescription,
     siteName: "Vernon Tamba Portfolio",
-    images: [
-      {
-        url: "/opengraph-image",
-        width: 1200,
-        height: 630,
-        alt: "Vernon Tamba portfolio preview card",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteTitle,
     description: siteDescription,
-    images: ["/opengraph-image"],
   },
 };
 

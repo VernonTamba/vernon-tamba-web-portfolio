@@ -10,12 +10,12 @@ import Image from "next/image";
 export default function Credits() {
   return (
     <SmoothScrolling>
-      <div className="max-w-7xl w-full min-h-dvh py-40 space-y-15">
+      <div className="max-w-7xl w-full min-h-dvh pt-40 pb-20 space-y-15">
         <div className="flex flex-col justify-center items-center">
           <h1 className="text-4xl md:text-7xl font-bold text-center">
             CREDITS
           </h1>
-          <p className="text-neutral-400 my-4 text-xl font-light">
+          <p className="text-neutral-400 my-4 text-xl font-light text-center">
             The people and resources behind this portfolio
           </p>
         </div>
@@ -147,9 +147,9 @@ export default function Credits() {
           <ContainerScroll
             titleComponent={
               <>
-                <h1 className="text-4xl font-semibold text-white dark:text-white">
+                <h1 className="text-2xl md:text-4xl font-semibold text-white dark:text-white">
                   Developer Portfolio with Next.js and Framer Motion <br />
-                  <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+                  <span className="text-2xl md:text-4xl md:text-[6rem] font-bold mt-1 leading-none">
                     JavaScript Mastery
                   </span>
                 </h1>
@@ -169,16 +169,17 @@ export default function Credits() {
           </ContainerScroll>
         </div>
 
-        <p className="text-neutral-400 my-4 text-xl md:text-4xl text-center mt-20 font-extralight tracking-widest">
+        <p className="text-neutral-400 my-4 text-lg md:text-4xl text-center mt-20 font-extralight tracking-widest">
           Big thanks to these creators for the inspiration and guidance.
           <br />
           And to you, thank you for visiting my portfolio.
+          <br />
           <br />
           Don't have a good day. Have a great day!
         </p>
         <LottiePlayer
           animationPath="fist-bump.json"
-          className="w-100 h-100 mx-auto mb-8"
+          className="md:w-100 md:h-100 mx-auto mb-8"
         />
       </div>
     </SmoothScrolling>

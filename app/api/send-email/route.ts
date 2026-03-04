@@ -108,7 +108,7 @@ export async function POST(request: Request) {
 
     const data = await resend.emails.send({
       from: "Portfolio <onboarding@resend.dev>",
-      to: "tambavernon@gmail.com",
+      to: "vernon.tamba777@gmail.com",
       subject: `New message from ${name}`,
       html: getEmailTemplate(name, email, message),
     });
