@@ -17,6 +17,7 @@ const siteUrl = "https://vernontamba.com";
 const siteTitle = "Vernon Tamba | Frontend Developer Portfolio";
 const siteDescription =
   "A personal web portfolio by Vernon Tamba. Explore projects, skills, experience, and ways to get in touch.";
+const sitePreviewImage = "/opengraph-image";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -26,6 +27,11 @@ export const metadata: Metadata = {
   },
   description: siteDescription,
   applicationName: "Vernon Tamba Portfolio",
+  icons: {
+    icon: [{ url: "/logo.png", type: "image/png" }],
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
   alternates: {
     canonical: "/",
   },
@@ -35,11 +41,20 @@ export const metadata: Metadata = {
     title: siteTitle,
     description: siteDescription,
     siteName: "Vernon Tamba Portfolio",
+    images: [
+      {
+        url: sitePreviewImage,
+        width: 1200,
+        height: 630,
+        alt: "Vernon Tamba frontend developer portfolio preview",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteTitle,
     description: siteDescription,
+    images: [sitePreviewImage],
   },
 };
 
