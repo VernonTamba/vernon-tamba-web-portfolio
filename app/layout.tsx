@@ -8,6 +8,7 @@ import { ThemeProvider } from "@/components/provider/theme-provider";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { FLOATING_NAV_ITEMS } from "@/constants/navigations";
 import { cn } from "@/lib/utils";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -84,6 +85,7 @@ export default function RootLayout({
             <Container>{children}</Container>
           </ThemeProvider>
         </ViewTransitions>
+        <Analytics />
         {gaId ? <GoogleAnalytics gaId={gaId} /> : null}
       </body>
     </html>
