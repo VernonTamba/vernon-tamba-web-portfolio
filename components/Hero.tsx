@@ -76,13 +76,13 @@ const Hero = () => {
 
       <BackgroundGradient
         containerClassName="m-4 hidden sm:block sm:m-6 md:m-8 lg:m-10"
-        className="rounded-[22px] bg-black p-2"
+        className="rounded-[22px] bg-black p-1.5"
       >
         <Image
           src={ProfilePicture}
           alt="Vernon Tamba"
-          sizes="(max-width: 640px) 170px, (max-width: 768px) 220px, (max-width: 1024px) 260px, 420px"
-          className="h-auto w-[170px] rounded-[22px] object-contain sm:w-[220px] md:w-[260px] lg:w-[420px]"
+          sizes="(max-width: 640px) 110px, (max-width: 768px) 135px, (max-width: 1024px) 160px, (max-width: 1280px) 200px, 320px"
+          className="h-auto w-[100px] rounded-[22px] object-contain sm:w-[125px] md:w-[150px] lg:w-[190px] xl:w-[320px]"
           priority
         />
       </BackgroundGradient>
