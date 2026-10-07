@@ -1,11 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import SmoothScrolling from "@/components/smooth-scrolling/SmoothScrolling";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import LottiePlayer from "@/components/ui/lottie-player";
 import { MacbookScroll } from "@/components/ui/macbook-scroll";
-import Image from "next/image";
 
 export default function Credits() {
   return (
@@ -126,11 +126,11 @@ export default function Credits() {
           </CardContainer>
         </div>
 
-        <p className="text-neutral-400 my-4 text-4xl md:text-5xl text-center border-b border-white/10 pb-10 -mb-35 mt-30 font-extralight tracking-widest">
+        <p className="text-neutral-400 my-4 text-4xl md:text-5xl text-center border-b border-white/10 pb-10 mb-6 md:mb-10 mt-20 font-extralight tracking-widest">
           INSPIRATIONS
         </p>
 
-        <div className="w-full overflow-hidden">
+        <div className="w-full overflow-x-clip">
           <MacbookScroll
             title={
               <span className="text-6xl text-white dark:text-white">
@@ -143,7 +143,7 @@ export default function Credits() {
         </div>
 
         {/* JAVASCRIPT MASTERY USE CONTAINER SCROLL ANIMATION */}
-        <div className="flex flex-col overflow-hidden">
+        <div className="flex flex-col overflow-hidden mt-6 md:mt-10">
           <ContainerScroll
             titleComponent={
               <>

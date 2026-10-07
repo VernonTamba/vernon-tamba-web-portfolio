@@ -1,4 +1,8 @@
 "use client";
+
+import { motion } from "motion/react";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { GiClick } from "react-icons/gi";
 import {
   Modal,
   ModalBody,
@@ -6,10 +10,6 @@ import {
   ModalFooter,
   ModalTrigger,
 } from "../ui/animated-modal";
-
-import { motion } from "motion/react";
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { GiClick } from "react-icons/gi";
 
 export function AnimatedModal() {
   const images = [

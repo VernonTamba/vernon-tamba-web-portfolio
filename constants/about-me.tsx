@@ -1,12 +1,12 @@
 import {
-  SiReact,
-  SiNextdotjs,
   SiAngular,
-  SiWordpress,
   SiFigma,
-  SiTypescript,
-  SiTailwindcss,
+  SiNextdotjs,
   SiNodedotjs,
+  SiReact,
+  SiTailwindcss,
+  SiTypescript,
+  SiWordpress,
 } from "react-icons/si";
 
 export const ABOUT_ME_TECH = [

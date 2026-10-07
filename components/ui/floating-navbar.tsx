@@ -1,15 +1,11 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import Link from "next/link";
-import {
-  motion,
-  AnimatePresence,
-  useScroll,
-  useMotionValueEvent,
-} from "motion/react";
-import { cn } from "@/lib/utils";
 import { useTransitionRouter } from "next-view-transitions";
+import type React from "react";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 export const FloatingNav = ({
   navItems,
@@ -23,32 +19,12 @@ export const FloatingNav = ({
   className?: string;
 }) => {
   const router = useTransitionRouter();
-
   const { scrollYProgress } = useScroll();
-
-  const [visible, setVisible] = useState(false);
-  const previousVisibleRef = useRef(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
     if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
-      let nextVisible = previousVisibleRef.current;
-
-      if (scrollYProgress.get() < 0.05) {
-        nextVisible = false;
-      } else {
-        if (direction < 0) {
-          nextVisible = true;
-        } else {
-          nextVisible = false;
-        }
-      }
-
-      if (nextVisible !== previousVisibleRef.current) {
-        previousVisibleRef.current = nextVisible;
-        setVisible(nextVisible);
-      }
+      setScrolled(current > 0.02);
     }
   });
 
@@ -91,57 +67,63 @@ export const FloatingNav = ({
   };
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        initial={{
-          opacity: 1,
-          y: -100,
-        }}
-        animate={{
-          y: visible ? 0 : -100,
-          opacity: visible ? 1 : 0,
-        }}
-        transition={{
-          duration: 0.2,
-        }}
-        className={cn(
-          "flex max-w-fit  fixed top-10 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-2  items-center justify-center space-x-4",
-          className,
-        )}
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: -20,
+      }}
+      animate={{
+        opacity: 1,
+        y: 0,
+      }}
+      transition={{
+        duration: 0.3,
+        ease: "easeOut",
+      }}
+      className={cn(
+        "flex max-w-fit fixed top-6 inset-x-0 mx-auto border border-white/[0.15] rounded-full backdrop-blur-md bg-black/75 shadow-[0px_4px_24px_rgba(0,0,0,0.4)] z-[5000] pr-2 pl-6 py-2 items-center justify-center space-x-4 transition-all duration-300",
+        scrolled &&
+          "border-white/[0.25] bg-black/85 shadow-[0px_8px_32px_rgba(0,0,0,0.6)]",
+        className,
+      )}
+    >
+      {navItems.map((navItem: any) => (
+        <Link
+          key={navItem.link}
+          onClick={(e) => {
+            e.preventDefault();
+            router.push(navItem.link, {
+              onTransitionReady: slideInOut,
+            });
+          }}
+          href={navItem.link}
+          className={cn(
+            "relative dark:text-neutral-200 items-center flex space-x-1 text-neutral-300 hover:text-white transition-colors duration-200",
+          )}
+        >
+          <span className="block sm:hidden">{navItem.icon}</span>
+          <span className="hidden sm:block text-sm font-medium">
+            {navItem.name}
+          </span>
+        </Link>
+      ))}
+      <button
+        type="button"
+        className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full hover:bg-white/10 transition-colors"
       >
-        {navItems.map((navItem: any, idx: number) => (
-          <Link
-            key={`link=${idx}`}
-            onClick={(e) => {
-              e.preventDefault();
-              router.push(navItem.link, {
-                onTransitionReady: slideInOut,
-              });
-            }}
-            href={navItem.link}
-            className={cn(
-              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500",
-            )}
-          >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block text-sm">{navItem.name}</span>
-          </Link>
-        ))}
-        <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
-          <Link
-            href={"/credits"}
-            onClick={(e) => {
-              e.preventDefault();
-              router.push("/credits", {
-                onTransitionReady: slideInOut,
-              });
-            }}
-          >
-            Credits
-          </Link>
-          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
-        </button>
-      </motion.div>
-    </AnimatePresence>
+        <Link
+          href={"/credits"}
+          onClick={(e) => {
+            e.preventDefault();
+            router.push("/credits", {
+              onTransitionReady: slideInOut,
+            });
+          }}
+        >
+          Credits
+        </Link>
+        <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
+      </button>
+    </motion.div>
   );
 };

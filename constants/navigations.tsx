@@ -1,12 +1,12 @@
 import {
-  IconHome,
-  IconMessage,
-  IconUser,
   IconBrandGithub,
   IconBrandLinkedin,
-  IconSchool,
   IconBriefcase2,
+  IconHome,
+  IconMessage,
+  IconSchool,
   IconShieldCheck,
+  IconUser,
 } from "@tabler/icons-react";
 import { GITHUB_URL, LINKEDIN_URL } from "./urls";
 

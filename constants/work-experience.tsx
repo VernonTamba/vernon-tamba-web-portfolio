@@ -3,12 +3,11 @@
 import Image from "next/image";
 
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
-
-import BRILogo from "@/public/images/bank-bri.svg";
-import SatkomLogo from "@/public/images/satkom.svg";
 import AdidataLogo from "@/public/images/adidata.svg";
+import BRILogo from "@/public/images/bank-bri.svg";
 import BankMandiriLogo from "@/public/images/bank-mandiri.svg";
 import LawenconLogo from "@/public/images/lawencon.svg";
+import SatkomLogo from "@/public/images/satkom.svg";
 
 import {
   ADIDATA_URL,
@@ -38,8 +37,8 @@ export const WORK_EXPERIENCE = [
         <p className="mb-8 text-sm md:text-base font-normal text-neutral-800 dark:text-neutral-200">
           As a Frontend Developer at BRI, I help build and maintain
           user-friendly features for Qlola by BRI. Our team is currently
-          developing improvements for the banking experience, and I focus on
-          the Online Registration module.
+          developing improvements for the banking experience, and I focus on the
+          Online Registration module.
         </p>
 
         <ul className="list-disc list-inside space-y-2 text-sm md:text-base font-normal text-neutral-800 dark:text-neutral-200">
@@ -126,8 +125,7 @@ export const WORK_EXPERIENCE = [
           </li>
           <li className="pl-6 -indent-6">
             Implemented responsive design to ensure optimal user experience
-            across
-            different devices and screen sizes.
+            across different devices and screen sizes.
           </li>
           <li className="pl-6 -indent-6">
             Collaborated with cross-functional teams, including fellow frontend
@@ -175,9 +173,9 @@ export const WORK_EXPERIENCE = [
         </p>
         <p className="mb-8 text-sm md:text-base font-normal text-neutral-800 dark:text-neutral-200">
           As a Frontend Developer at Bank Mandiri, I helped build and maintain
-          user-friendly features for Kopra by Mandiri. My team delivered
-          general banking features such as Pending Task, User Management, and
-          Bank Admin modules to support daily operations.
+          user-friendly features for Kopra by Mandiri. My team delivered general
+          banking features such as Pending Task, User Management, and Bank Admin
+          modules to support daily operations.
         </p>
 
         <ul className="list-disc list-inside space-y-2 text-sm md:text-base font-normal text-neutral-800 dark:text-neutral-200">
@@ -254,10 +252,10 @@ export const WORK_EXPERIENCE = [
         </p>
         <p className="mb-8 text-sm md:text-base font-normal text-neutral-800 dark:text-neutral-200">
           As a Frontend Developer at Lawencon International, I worked on
-          user-friendly features for LinovHR and an internal Document
-          Management System. I contributed to a Donation Request sub-module in
-          LinovHR and developed key features for the DMS, including dashboard
-          pages, document upload, and document viewer pages.
+          user-friendly features for LinovHR and an internal Document Management
+          System. I contributed to a Donation Request sub-module in LinovHR and
+          developed key features for the DMS, including dashboard pages,
+          document upload, and document viewer pages.
         </p>
 
         <ul className="list-disc list-inside space-y-2 text-sm md:text-base font-normal text-neutral-800 dark:text-neutral-200">

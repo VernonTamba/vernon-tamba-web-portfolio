@@ -1,7 +1,7 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import { useRef } from "react";
+import { cn } from "@/lib/utils";
 
 export const GlareCard = ({
   children,

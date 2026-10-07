@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/next";
 import { ViewTransitions } from "next-view-transitions";
 import Container from "@/components/layout/Container";
 import { ThemeProvider } from "@/components/provider/theme-provider";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { FLOATING_NAV_ITEMS } from "@/constants/navigations";
 import { cn } from "@/lib/utils";
-import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   subsets: ["latin"],

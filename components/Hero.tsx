@@ -1,17 +1,15 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "motion/react";
-
-import { TextGenerateEffect } from "./ui/text-generate-effect";
+import Image from "next/image";
+import CheckmarkIcon from "@/public/icons/accept.png";
+import GmailIcon from "@/public/icons/gmail.png";
+import LocationIcon from "@/public/icons/pin.png";
+import ProfilePicture from "@/public/images/Vernon Profile Picture.webp";
 import { BackgroundGradient } from "./ui/background-gradient";
 import { LayoutTextFlip } from "./ui/layout-text-flip";
 import MagicButton from "./ui/magic-button";
-
-import ProfilePicture from "@/public/images/profile-picture-2.png";
-import GmailIcon from "@/public/icons/gmail.png";
-import LocationIcon from "@/public/icons/pin.png";
-import CheckmarkIcon from "@/public/icons/accept.png";
+import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 const Hero = () => {
   return (
@@ -75,16 +73,19 @@ const Hero = () => {
       </div>
 
       <BackgroundGradient
-        containerClassName="m-4 hidden sm:block sm:m-6 md:m-8 lg:m-10"
-        className="rounded-[22px] bg-black p-1.5"
+        containerClassName="m-4 hidden sm:block sm:m-6 md:m-8 lg:m-10 shrink-0 self-center"
+        className="rounded-[24px] bg-black p-1.5"
       >
-        <Image
-          src={ProfilePicture}
-          alt="Vernon Tamba"
-          sizes="(max-width: 640px) 110px, (max-width: 768px) 135px, (max-width: 1024px) 160px, (max-width: 1280px) 200px, 320px"
-          className="h-auto w-[100px] rounded-[22px] object-contain sm:w-[125px] md:w-[150px] lg:w-[190px] xl:w-[320px]"
-          priority
-        />
+        <div className="relative overflow-hidden rounded-[20px] w-[220px] h-[300px] sm:w-[260px] sm:h-[360px] md:w-[300px] md:h-[420px] lg:w-[340px] lg:h-[460px] xl:w-[360px] xl:h-[480px]">
+          <Image
+            src={ProfilePicture}
+            alt="Vernon Tamba"
+            fill
+            sizes="(max-width: 640px) 220px, (max-width: 768px) 260px, (max-width: 1024px) 300px, (max-width: 1280px) 340px, 360px"
+            className="object-cover object-center"
+            priority
+          />
+        </div>
       </BackgroundGradient>
     </div>
   );

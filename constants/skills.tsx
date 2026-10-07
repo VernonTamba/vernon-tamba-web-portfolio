@@ -1,16 +1,16 @@
 import {
-  SiReact,
-  SiNextdotjs,
   SiAngular,
-  SiWordpress,
-  SiTypescript,
-  SiTailwindcss,
+  SiBitbucket,
+  SiConfluence,
   SiFigma,
   SiGit,
   SiGithub,
-  SiBitbucket,
   SiJira,
-  SiConfluence,
+  SiNextdotjs,
+  SiReact,
+  SiTailwindcss,
+  SiTypescript,
+  SiWordpress,
 } from "react-icons/si";
 
 export const SKILLS = [

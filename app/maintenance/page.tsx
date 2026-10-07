@@ -1,6 +1,6 @@
-import LottiePlayer from "@/components/ui/lottie-player";
 import { IconInfoTriangleFilled } from "@tabler/icons-react";
 import type { Metadata } from "next";
+import LottiePlayer from "@/components/ui/lottie-player";
 
 export const metadata: Metadata = {
   title: "Maintenance | Vernon's Portfolio",

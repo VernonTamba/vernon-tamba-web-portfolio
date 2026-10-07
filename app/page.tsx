@@ -1,7 +1,7 @@
+import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
 import SmoothScrolling from "@/components/smooth-scrolling/SmoothScrolling";
 import { FLOATING_DOCKS_ITEMS } from "@/constants/navigations";
-import dynamic from "next/dynamic";
 
 const AboutMe = dynamic(() => import("@/components/AboutMe"));
 const WorkExperience = dynamic(() => import("@/components/WorkExperience"));

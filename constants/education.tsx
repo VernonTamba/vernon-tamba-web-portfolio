@@ -1,64 +1,41 @@
-import Image from "next/image";
-
-import LawenconLogo from "@/public/images/lawencon.svg";
-import AUPLogo from "@/public/images/aup.svg";
+import type { StaticImageData } from "next/image";
 import AIIASLogo from "@/public/images/aiias.svg";
+import AUPLogo from "@/public/images/aup.svg";
+import LawenconLogo from "@/public/images/lawencon.svg";
 
-export const EDUCATION = [
+export interface EducationItem {
+  title: string;
+  degree: string;
+  honor: string;
+  badge: string;
+  logo: StaticImageData;
+  image: string;
+}
+
+export const EDUCATION: EducationItem[] = [
   {
     title: "Lawencon International",
-    description: (
-      <div className="flex flex-col gap-2">
-        <p className="md:text-lg font-semibold">
-          Full-Stack Developer Bootcamp
-        </p>
-        <p>Passed</p>
-
-        <Image
-          className="absolute top-3 right-3 lg:top-50 lg:-right-35 w-10 h-10 md:w-25 md:h-25"
-          src={LawenconLogo}
-          alt="Lawencon Logo"
-        />
-      </div>
-    ),
+    degree: "Full-Stack Developer Bootcamp",
+    honor: "Completed & Passed",
     badge: "2023 - 2024",
+    logo: LawenconLogo,
     image: "/images/lawencon.jpg",
   },
   {
     title: "Adventist University of the Philippines (AUP)",
-    description: (
-      <div className="flex flex-col gap-2">
-        <p className="md:text-lg font-semibold">
-          Bachelor of Science in Information Technology
-        </p>
-        <p>Summa Cum Laude</p>
-
-        <Image
-          className="absolute top-3 right-3 lg:top-40 lg:-right-35 w-10 h-10 md:w-25 md:h-25"
-          src={AUPLogo}
-          alt="AUP Logo"
-        />
-      </div>
-    ),
+    degree: "Bachelor of Science in Information Technology",
+    honor: "Summa Cum Laude",
     badge: "2019 - 2023",
+    logo: AUPLogo,
     image: "/images/aup.jpg",
   },
   {
     title:
       "Adventist International Institute of Advanced Studies Academy (AIIAS)",
-    description: (
-      <div className="flex flex-col gap-2">
-        <p className="md:text-lg font-semibold">Senior High School</p>
-        <p>Academic Excellence Award</p>
-
-        <Image
-          className="absolute top-3 right-3 lg:top-40 lg:-right-35 w-10 h-10 md:w-25 md:h-25"
-          src={AIIASLogo}
-          alt="AIIAS Logo"
-        />
-      </div>
-    ),
+    degree: "Senior High School",
+    honor: "Academic Excellence Award",
     badge: "2016 - 2019",
+    logo: AIIASLogo,
     image: "/images/aiias.jpeg",
   },
 ];

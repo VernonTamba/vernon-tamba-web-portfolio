@@ -1,7 +1,7 @@
 import Image from "next/image";
+import { PROJECTS } from "@/constants/projects";
 import { PinContainer } from "./ui/3d-pin";
 import { AnimatedTooltip } from "./ui/animated-tooltip";
-import { PROJECTS } from "@/constants/projects";
 
 const Projects = () => {
   return (
@@ -18,9 +18,9 @@ const Projects = () => {
       </h3>
 
       <p className="max-w-4xl px-4 text-left text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-base md:text-justify">
-        Here are some projects I have contributed to during my frontend
-        journey. Each one helped me practice building responsive,
-        user-friendly interfaces in real-world environments.
+        Here are some projects I have contributed to during my frontend journey.
+        Each one helped me practice building responsive, user-friendly
+        interfaces in real-world environments.
       </p>
 
       <div className="flex flex-wrap items-center justify-center gap-y-10 gap-x-2 px-4">

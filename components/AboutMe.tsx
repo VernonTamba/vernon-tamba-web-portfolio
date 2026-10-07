@@ -1,5 +1,5 @@
-import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 import { PERSONALITY_TRAITS } from "@/constants/about-me";
+import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 
 const AboutMe = () => {
   return (

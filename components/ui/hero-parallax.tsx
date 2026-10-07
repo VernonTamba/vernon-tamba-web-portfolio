@@ -1,13 +1,13 @@
 "use client";
-import Image from "next/image";
-import React from "react";
 import {
+  type MotionValue,
   motion,
   useScroll,
-  useTransform,
   useSpring,
-  MotionValue,
+  useTransform,
 } from "motion/react";
+import Image from "next/image";
+import React from "react";
 import LottiePlayer from "./lottie-player";
 
 export const HeroParallax = ({

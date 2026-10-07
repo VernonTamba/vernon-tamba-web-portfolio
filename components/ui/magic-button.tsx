@@ -1,8 +1,8 @@
 "use client";
 
+import { useLenis } from "lenis/react";
 import { Code } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useLenis } from "lenis/react";
 
 const MagicButton = ({
   className,

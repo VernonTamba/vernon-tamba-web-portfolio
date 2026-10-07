@@ -1,7 +1,28 @@
+import {
+  IconAppWindow,
+  IconBible,
+  IconBrandFacebook,
+  IconBrandGithub,
+  IconBrandGmail,
+  IconBrandInstagram,
+  IconBrandLinkedin,
+  IconBrandTelegram,
+  IconBrandWhatsapp,
+  IconBriefcase,
+  IconCode,
+  IconCodeCircle2,
+  IconCoffee,
+  IconLanguage,
+  IconMapPin,
+  IconMoodHappyFilled,
+  IconRocket,
+  IconSchool,
+} from "@tabler/icons-react";
 import CountUp from "@/components/component/countup";
 import SmoothScrolling from "@/components/smooth-scrolling/SmoothScrolling";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
 import { HeroParallax } from "@/components/ui/hero-parallax";
+import { MobileWorkCarousel } from "@/components/ui/mobile-work-carousel";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import {
   FACEBOOK_URL,
@@ -13,26 +34,6 @@ import {
   WHATSAPP_URL,
 } from "@/constants/urls";
 import { WORK_EXPERIENCE_LIFE } from "@/constants/work-experience";
-import {
-  IconCode,
-  IconLanguage,
-  IconSchool,
-  IconRocket,
-  IconMapPin,
-  IconBriefcase,
-  IconMoodHappyFilled,
-  IconCodeCircle2,
-  IconCoffee,
-  IconAppWindow,
-  IconBrandFacebook,
-  IconBrandInstagram,
-  IconBrandLinkedin,
-  IconBrandGithub,
-  IconBrandWhatsapp,
-  IconBrandTelegram,
-  IconBrandGmail,
-  IconBible,
-} from "@tabler/icons-react";
 
 export default function AboutMe() {
   const words = [
@@ -271,9 +272,14 @@ export default function AboutMe() {
           </div>
         </div>
 
-        <HeroParallax products={WORK_EXPERIENCE_LIFE} />
+        <div className="hidden md:block">
+          <HeroParallax products={WORK_EXPERIENCE_LIFE} />
+        </div>
+        <div className="block md:hidden">
+          <MobileWorkCarousel products={WORK_EXPERIENCE_LIFE} />
+        </div>
 
-        <div className="min-h-screen mt-40 flex flex-col justify-center items-center">
+        <div className="min-h-screen mt-20 md:mt-40 flex flex-col justify-center items-center">
           <TypewriterEffectSmooth className="justify-center" words={words} />
 
           <footer className="w-full py-12 border-t border-white/10 md:mt-10">

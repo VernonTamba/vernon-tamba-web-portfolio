@@ -1,13 +1,13 @@
 "use client";
 
+import {
+  IconAlertTriangle,
+  IconCheck,
+  IconInfoCircle,
+  IconX,
+} from "@tabler/icons-react";
 import { useEffect } from "react";
 import { cn } from "@/lib/utils";
-import {
-  IconCheck,
-  IconX,
-  IconInfoCircle,
-  IconAlertTriangle,
-} from "@tabler/icons-react";
 
 export type SnackbarType = "success" | "error" | "info" | "warning";
 

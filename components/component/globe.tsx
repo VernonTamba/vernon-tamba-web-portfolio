@@ -1,8 +1,9 @@
 "use client";
-import React, { Component, ReactNode } from "react";
+import { RefreshCcw } from "lucide-react"; // Optional: Icon for the button
 import { motion } from "motion/react";
 import dynamic from "next/dynamic";
-import { RefreshCcw } from "lucide-react"; // Optional: Icon for the button
+import type React from "react";
+import { Component, type ReactNode } from "react";
 import LottiePlayer from "../ui/lottie-player";
 
 // 1. Define the Error Boundary Component

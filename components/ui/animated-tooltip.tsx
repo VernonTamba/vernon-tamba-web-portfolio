@@ -1,13 +1,13 @@
 "use client";
 
-import React, { useState, useRef } from "react";
 import {
-  motion,
-  useTransform,
   AnimatePresence,
+  motion,
   useMotionValue,
   useSpring,
+  useTransform,
 } from "motion/react";
+import React, { useRef, useState } from "react";
 
 export const AnimatedTooltip = ({
   items,

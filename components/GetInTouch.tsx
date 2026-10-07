@@ -1,17 +1,16 @@
 "use client";
 
-import { Label } from "./ui/label";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
-import { cn } from "@/lib/utils";
 import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
-
 import { SiGmail } from "react-icons/si";
-import { LinkPreview } from "./ui/link-preview";
-import { SOCIAL_MEDIA } from "@/constants/social-media";
-import { Snackbar, SnackbarType } from "@/components/component/snackbar";
+import { Snackbar, type SnackbarType } from "@/components/component/snackbar";
 import { Spinner } from "@/components/component/spinner";
+import { SOCIAL_MEDIA } from "@/constants/social-media";
+import { cn } from "@/lib/utils";
+import { Input } from "./ui/input";
+import { Label } from "./ui/label";
+import { LinkPreview } from "./ui/link-preview";
+import { Textarea } from "./ui/textarea";
 
 const WhiteGlobe = dynamic(
   () => import("./component/globe-white").then((module) => module.WhiteGlobe),

@@ -1,9 +1,9 @@
-import QlolaImg from "@/public/images/qlola.webp";
-import KopraImg from "@/public/images/kopra.jpeg";
 import AIInterviewImg from "@/public/images/ai-interview.png";
-import HRManagementImg from "@/public/images/hrm.png";
-import LinovHRImg from "@/public/images/linovhr.jpg";
 import DMSImg from "@/public/images/dms.jpg";
+import HRManagementImg from "@/public/images/hrm.png";
+import KopraImg from "@/public/images/kopra.jpeg";
+import LinovHRImg from "@/public/images/linovhr.jpg";
+import QlolaImg from "@/public/images/qlola.webp";
 
 export const PROJECTS = [
   {
