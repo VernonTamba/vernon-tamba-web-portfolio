@@ -70,29 +70,29 @@ export const HeroParallax = ({
         className=""
       >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
-          {firstRow.map((product, index) => (
+          {firstRow.map((product) => (
             <ProductCard
               product={product}
               translate={translateX}
-              key={product.title + index}
+              key={product.thumbnail}
             />
           ))}
         </motion.div>
         <motion.div className="flex flex-row  mb-20 space-x-20 ">
-          {secondRow.map((product, index) => (
+          {secondRow.map((product) => (
             <ProductCard
               product={product}
               translate={translateXReverse}
-              key={product.title + index}
+              key={product.thumbnail}
             />
           ))}
         </motion.div>
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
-          {thirdRow.map((product, index) => (
+          {thirdRow.map((product) => (
             <ProductCard
               product={product}
               translate={translateX}
-              key={product.title + index}
+              key={product.thumbnail}
             />
           ))}
         </motion.div>
@@ -109,7 +109,7 @@ export const Header = () => {
           About my <br /> work experience
         </h1>
         <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-          I have been working as a frontend developer for more than 1 year. I
+          I have been working as a frontend developer for more than 2 years. I
           have met a lot of people, and I have learned a lot from them. I have
           also had the opportunity to work on a lot of projects, and I have
           learned a lot from them. <br /> <br /> These experiences have allowed
