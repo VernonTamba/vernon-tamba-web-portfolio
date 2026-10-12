@@ -107,23 +107,19 @@ export const FloatingNav = ({
           </span>
         </Link>
       ))}
-      <button
-        type="button"
-        className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full hover:bg-white/10 transition-colors"
+      <Link
+        href="/credits"
+        onClick={(e) => {
+          e.preventDefault();
+          router.push("/credits", {
+            onTransitionReady: slideInOut,
+          });
+        }}
+        className="border text-xs sm:text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-full hover:bg-white/10 transition-colors inline-flex items-center justify-center"
       >
-        <Link
-          href={"/credits"}
-          onClick={(e) => {
-            e.preventDefault();
-            router.push("/credits", {
-              onTransitionReady: slideInOut,
-            });
-          }}
-        >
-          Credits
-        </Link>
+        <span>Credits</span>
         <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
-      </button>
+      </Link>
     </motion.div>
   );
 };

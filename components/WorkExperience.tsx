@@ -25,7 +25,7 @@ const WorkExperience = () => {
         {WORK_EXPERIENCE_INTRO.subtitle}
       </h3>
 
-      <p className="max-w-4xl px-4 text-left text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-base md:text-justify">
+      <p className="max-w-4xl px-4 text-left text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-base md:text-left">
         {WORK_EXPERIENCE_INTRO.description}
       </p>
 

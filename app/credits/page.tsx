@@ -1,5 +1,6 @@
 "use client";
 
+import { IconExternalLink } from "@tabler/icons-react";
 import Image from "next/image";
 import SmoothScrolling from "@/components/smooth-scrolling/SmoothScrolling";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
@@ -10,17 +11,17 @@ import { MacbookScroll } from "@/components/ui/macbook-scroll";
 export default function Credits() {
   return (
     <SmoothScrolling>
-      <div className="max-w-7xl w-full min-h-dvh pt-40 pb-20 space-y-15">
+      <div className="max-w-7xl w-full min-h-dvh pt-28 sm:pt-36 md:pt-40 pb-20 space-y-12 sm:space-y-15">
         <div className="flex flex-col justify-center items-center">
           <h1 className="text-4xl md:text-7xl font-bold text-center">
             CREDITS
           </h1>
-          <p className="text-neutral-400 my-4 text-xl font-light text-center">
+          <p className="text-neutral-400 my-4 text-base sm:text-xl font-light text-center">
             The people and resources behind this portfolio
           </p>
         </div>
 
-        <p className="text-neutral-400 my-4 text-4xl md:text-5xl text-center border-b border-white/10 pb-10 mt-30 font-extralight tracking-widest">
+        <p className="text-neutral-400 my-4 text-2xl sm:text-3xl md:text-5xl text-center border-b border-white/10 pb-6 md:pb-10 mt-16 md:mt-28 font-extralight tracking-wider sm:tracking-widest">
           FRAMEWORKS & LIBRARIES
         </p>
 
@@ -126,15 +127,26 @@ export default function Credits() {
           </CardContainer>
         </div>
 
-        <p className="text-neutral-400 my-4 text-4xl md:text-5xl text-center border-b border-white/10 pb-10 mb-6 md:mb-10 mt-20 font-extralight tracking-widest">
+        <p className="text-neutral-400 my-4 text-2xl sm:text-3xl md:text-5xl text-center border-b border-white/10 pb-6 md:pb-10 mb-6 sm:mb-8 md:mb-10 mt-12 md:mt-20 font-extralight tracking-wider sm:tracking-widest">
           INSPIRATIONS
         </p>
 
         <div className="w-full overflow-x-clip">
           <MacbookScroll
             title={
-              <span className="text-6xl text-white dark:text-white">
-                Sonny Sangha <br /> Next-Gen AI Portfolio with Next.js
+              <span className="flex flex-col items-center">
+                <span className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-white dark:text-white">
+                  Sonny Sangha <br /> Next-Gen AI Portfolio with Next.js
+                </span>
+                <a
+                  href="https://www.youtube.com/watch?v=HtUaDmMEnFY"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 rounded-full border border-white/15 bg-white/10 hover:bg-red-500/20 hover:border-red-500/40 text-xs sm:text-sm text-neutral-200 hover:text-white transition-all shadow-sm"
+                >
+                  <span>Watch on YouTube</span>
+                  <IconExternalLink className="h-3.5 w-3.5 text-neutral-300" />
+                </a>
               </span>
             }
             src={`https://www.youtube.com/embed/HtUaDmMEnFY`}
@@ -143,33 +155,40 @@ export default function Credits() {
         </div>
 
         {/* JAVASCRIPT MASTERY USE CONTAINER SCROLL ANIMATION */}
-        <div className="flex flex-col overflow-hidden mt-6 md:mt-10">
+        <div className="flex flex-col overflow-hidden -mt-6 sm:-mt-10 md:mt-4">
           <ContainerScroll
             titleComponent={
-              <>
+              <div className="flex flex-col items-center">
                 <h1 className="text-2xl md:text-4xl font-semibold text-white dark:text-white">
                   Developer Portfolio with Next.js and Framer Motion <br />
-                  <span className="text-2xl md:text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+                  <span className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-1 leading-tight">
                     JavaScript Mastery
                   </span>
                 </h1>
-              </>
+                <a
+                  href="https://www.youtube.com/watch?v=FTH6Dn3AyIQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 rounded-full border border-white/15 bg-white/10 hover:bg-red-500/20 hover:border-red-500/40 text-xs sm:text-sm text-neutral-200 hover:text-white transition-all font-normal shadow-sm"
+                >
+                  <span>Watch on YouTube</span>
+                  <IconExternalLink className="h-3.5 w-3.5 text-neutral-300" />
+                </a>
+              </div>
             }
           >
             <iframe
               src="https://www.youtube.com/embed/FTH6Dn3AyIQ"
               loading="lazy"
-              className="mx-auto rounded-2xl object-cover h-full object-left-top w-full"
-              height={720}
-              width={1400}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              title="JavaScript Mastery - Developer Portfolio with Next.js and Framer Motion"
+              className="w-full h-full rounded-xl sm:rounded-2xl border-0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             />
           </ContainerScroll>
         </div>
 
-        <p className="text-neutral-400 my-4 text-lg md:text-4xl text-center mt-20 font-extralight tracking-widest">
+        <p className="text-neutral-400 my-4 text-base sm:text-xl md:text-3xl text-center mt-16 md:mt-20 font-extralight tracking-wide sm:tracking-widest px-4">
           Big thanks to these creators for the inspiration and guidance.
           <br />
           And to you, thank you for visiting my portfolio.

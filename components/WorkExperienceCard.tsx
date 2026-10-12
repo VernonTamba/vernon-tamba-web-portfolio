@@ -114,4 +114,3 @@ export const WorkExperienceCard = ({ experience }: WorkExperienceCardProps) => {
     </div>
   );
 };
-

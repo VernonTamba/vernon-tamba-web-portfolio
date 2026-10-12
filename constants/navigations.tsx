@@ -2,7 +2,9 @@ import {
   IconBrandGithub,
   IconBrandLinkedin,
   IconBriefcase2,
+  IconFolderCode,
   IconHome,
+  IconMail,
   IconMessage,
   IconSchool,
   IconShieldCheck,
@@ -31,7 +33,6 @@ export const FLOATING_DOCKS_ITEMS = [
     ),
     href: "#home",
   },
-
   {
     title: "Education",
     icon: (
@@ -52,6 +53,20 @@ export const FLOATING_DOCKS_ITEMS = [
       <IconShieldCheck className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
     href: "#skills",
+  },
+  {
+    title: "Projects",
+    icon: (
+      <IconFolderCode className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    ),
+    href: "#projects",
+  },
+  {
+    title: "Contact",
+    icon: (
+      <IconMail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    ),
+    href: "#get-in-touch",
   },
   {
     title: "LinkedIn",

@@ -152,7 +152,7 @@ const GetInTouch = () => {
           Wherever you are, I am happy to connect.
         </h3>
 
-        <p className="mb-6 max-w-4xl px-4 text-left text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-base md:mb-8 md:text-justify">
+        <p className="mb-6 max-w-4xl px-4 text-left text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-base md:mb-8 md:text-left">
           I enjoy connecting with other developers and people who love building
           for the web. If you have a project idea, an opportunity, or just want
           to say hello, feel free to send a message.
@@ -241,11 +241,11 @@ const GetInTouch = () => {
           ) : null}
 
           {isDesktopViewport === false ? (
-            <div className="flex w-full justify-center lg:hidden">
+            <div className="pointer-events-none my-4 flex w-full justify-center lg:hidden">
               {isGlobeVisible ? (
-                <WhiteGlobe size={300} />
+                <WhiteGlobe size={280} />
               ) : (
-                <div className="h-[300px] w-[300px]" />
+                <div className="h-[280px] w-[280px]" />
               )}
             </div>
           ) : null}

@@ -19,7 +19,7 @@ const Education = () => {
         My learning journey so far
       </h3>
 
-      <p className="max-w-4xl px-4 text-left text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-base md:text-justify">
+      <p className="max-w-4xl px-4 text-left text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-base md:text-left">
         I completed senior high school at Adventist International Institute of
         Advanced Studies (AIIAS) Academy in 2019. I then earned my
         Bachelor&apos;s degree in Information Technology from Adventist

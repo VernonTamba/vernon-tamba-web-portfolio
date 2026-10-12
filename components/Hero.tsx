@@ -20,7 +20,7 @@ const Hero = () => {
       <div className="relative z-10 mx-auto flex w-full max-w-3xl flex-col items-start justify-center px-1 sm:px-4">
         <TextGenerateEffect words={"Vernon Tamba"} />
 
-        <motion.div className="relative my-4 flex items-center gap-4 sm:mx-0 sm:mb-0">
+        <motion.div className="relative my-4 flex flex-wrap items-center gap-2 sm:gap-4 sm:mx-0 sm:mb-0">
           <LayoutTextFlip
             text="I build with"
             words={["Next.js", "React", "Angular", "WordPress"]}
@@ -73,15 +73,15 @@ const Hero = () => {
       </div>
 
       <BackgroundGradient
-        containerClassName="m-4 hidden sm:block sm:m-6 md:m-8 lg:m-10 shrink-0 self-center"
+        containerClassName="m-4 block sm:m-6 md:m-8 lg:m-10 shrink-0 self-center"
         className="rounded-[24px] bg-black p-1.5"
       >
-        <div className="relative overflow-hidden rounded-[20px] w-[220px] h-[300px] sm:w-[260px] sm:h-[360px] md:w-[300px] md:h-[420px] lg:w-[340px] lg:h-[460px] xl:w-[360px] xl:h-[480px]">
+        <div className="relative overflow-hidden rounded-[20px] w-[200px] h-[280px] sm:w-[260px] sm:h-[360px] md:w-[300px] md:h-[420px] lg:w-[340px] lg:h-[460px] xl:w-[360px] xl:h-[480px]">
           <Image
             src={ProfilePicture}
             alt="Vernon Tamba"
             fill
-            sizes="(max-width: 640px) 220px, (max-width: 768px) 260px, (max-width: 1024px) 300px, (max-width: 1280px) 340px, 360px"
+            sizes="(max-width: 640px) 200px, (max-width: 768px) 260px, (max-width: 1024px) 300px, (max-width: 1280px) 340px, 360px"
             className="object-cover object-center"
             priority
           />

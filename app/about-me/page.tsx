@@ -106,7 +106,7 @@ export default function AboutMe() {
 
   return (
     <SmoothScrolling>
-      <div className="max-w-7xl w-full min-h-dvh pt-40 space-y-15">
+      <div className="max-w-7xl w-full min-h-dvh pt-28 sm:pt-36 md:pt-40 space-y-12 sm:space-y-15">
         <div className="flex flex-col justify-center items-center">
           <h1 className="text-4xl md:text-7xl font-bold text-center">
             ABOUT ME
@@ -233,7 +233,7 @@ export default function AboutMe() {
           </CardSpotlight>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-around items-center md:gap-4 mt-25 -mb-10 h-dvh md:h-[30dvh] border-t border-b border-white/10">
+        <div className="flex flex-col md:flex-row justify-around items-center md:gap-4 mt-16 md:mt-24 py-14 sm:py-16 md:py-0 md:h-[30dvh] border-t border-b border-white/10 gap-10 md:gap-0">
           <div className="space-y-2 flex flex-col justify-center items-center gap-2">
             <CountUp
               value={2}
@@ -242,9 +242,11 @@ export default function AboutMe() {
               suffix="+"
               icon={<IconCodeCircle2 className="w-8 h-8 mb-2" />}
               iconPosition="top"
-              className="text-6xl font-bold text-white"
+              className="text-5xl sm:text-6xl font-bold text-white"
             />
-            <p>Years of Experience</p>
+            <p className="text-sm sm:text-base text-neutral-300">
+              Years of Experience
+            </p>
           </div>
           <div className="space-y-2 flex flex-col justify-center items-center gap-2">
             <CountUp
@@ -254,9 +256,11 @@ export default function AboutMe() {
               suffix="+"
               icon={<IconAppWindow className="w-8 h-8 mb-2" />}
               iconPosition="top"
-              className="text-6xl font-bold text-white"
+              className="text-5xl sm:text-6xl font-bold text-white"
             />
-            <p>Number of Projects</p>
+            <p className="text-sm sm:text-base text-neutral-300">
+              Number of Projects
+            </p>
           </div>
           <div className="space-y-2 flex flex-col justify-center items-center gap-2">
             <CountUp
@@ -266,9 +270,11 @@ export default function AboutMe() {
               suffix=""
               icon={<IconCoffee className="w-8 h-8 mb-2" />}
               iconPosition="top"
-              className="text-6xl font-bold text-white"
+              className="text-5xl sm:text-6xl font-bold text-white"
             />
-            <p>Number of Coffees</p>
+            <p className="text-sm sm:text-base text-neutral-300">
+              Number of Coffees
+            </p>
           </div>
         </div>
 
@@ -279,7 +285,7 @@ export default function AboutMe() {
           <MobileWorkCarousel products={WORK_EXPERIENCE_LIFE} />
         </div>
 
-        <div className="min-h-screen mt-20 md:mt-40 flex flex-col justify-center items-center">
+        <div className="min-h-[50vh] md:min-h-screen mt-16 md:mt-32 flex flex-col justify-center items-center">
           <TypewriterEffectSmooth className="justify-center" words={words} />
 
           <footer className="w-full py-12 border-t border-white/10 md:mt-10">

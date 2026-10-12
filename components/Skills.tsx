@@ -18,7 +18,7 @@ const Skills = () => {
         Skills and tools I use in my work
       </h3>
 
-      <p className="max-w-4xl px-4 text-left text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-base md:text-justify">
+      <p className="max-w-4xl px-4 text-left text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-base md:text-left">
         These are the skills and tools I use when building web applications and
         collaborating with teams. I keep learning and improving them through
         day-to-day work and personal projects.

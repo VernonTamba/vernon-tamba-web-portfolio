@@ -15,7 +15,7 @@ const AboutMe = () => {
         A little introduction about who I am
       </h3>
 
-      <p className="max-w-4xl px-4 text-left text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-base md:text-justify">
+      <p className="max-w-4xl px-4 text-left text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-base md:text-left">
         I am a frontend developer who enjoys building modern web interfaces
         using React, Next.js, Angular, and WordPress. I focus on creating
         websites that are clean, responsive, and easy to use. I enjoy solving
@@ -24,7 +24,7 @@ const AboutMe = () => {
         industry.
       </p>
 
-      <p className="max-w-4xl px-4 text-left text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-base md:text-justify">
+      <p className="max-w-4xl px-4 text-left text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-base md:text-left">
         My journey so far has given me opportunities to work on different
         projects and collaborate with different teams. Each project helps me
         improve my communication, technical skills, and attention to detail.

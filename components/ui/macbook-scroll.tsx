@@ -77,14 +77,14 @@ export const MacbookScroll = ({
   return (
     <div
       ref={ref}
-      className="flex min-h-[90dvh] md:min-h-[130dvh] shrink-0 scale-[0.4] transform flex-col items-center justify-start py-6 [perspective:800px] sm:scale-60 md:scale-100 md:pt-16 md:pb-20"
+      className="flex min-h-[28rem] sm:min-h-[36rem] md:min-h-[110dvh] shrink-0 scale-[0.55] sm:scale-70 md:scale-100 origin-top transform flex-col items-center justify-start pt-6 pb-2 sm:pt-8 sm:pb-6 [perspective:800px] md:pt-16 md:pb-20"
     >
       <motion.h2
         style={{
           translateY: textTransform,
           opacity: textOpacity,
         }}
-        className="mb-20 text-center text-3xl font-bold text-neutral-800 dark:text-white"
+        className="mb-8 sm:mb-14 md:mb-20 text-center text-3xl font-bold text-neutral-800 dark:text-white"
       >
         {title || (
           <span>
@@ -177,9 +177,8 @@ export const Lid = ({
         <iframe
           src={src as string} // Use YouTube embed URL
           title="Macbook screen inspiration video"
-          className="absolute inset-0 h-full w-full rounded-lg object-cover object-left-top"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          className="absolute inset-0 h-full w-full rounded-lg border-0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         />
       </motion.div>

@@ -32,12 +32,12 @@ const Footer = () => {
   return (
     <div
       id="footer"
-      className="relative flex min-h-screen w-full flex-col items-center justify-center gap-6 overflow-hidden py-20 md:gap-8 md:py-24"
+      className="relative flex min-h-[50vh] md:min-h-screen w-full flex-col items-center justify-center gap-6 overflow-hidden py-16 md:gap-8 md:py-24"
     >
       <FlipWords
         words={words}
         duration={1000}
-        className="text-center text-4xl font-extrabold leading-tight sm:text-6xl md:text-7xl lg:text-8xl xl:text-[150px]"
+        className="text-center text-3xl font-extrabold leading-tight sm:text-6xl md:text-7xl lg:text-8xl xl:text-[130px]"
       />
       <p className="mx-auto pt-10 text-xs font-light sm:text-sm md:text-base">
         <EncryptedText
