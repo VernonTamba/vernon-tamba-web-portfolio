@@ -51,13 +51,13 @@ export const HeroParallax = ({
     springConfig,
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
+    useTransform(scrollYProgress, [0, 0.2], [-600, 200]),
     springConfig,
   );
   return (
     <div
       ref={ref}
-      className="h-[300vh] pt-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[320vh] min-h-[2600px] lg:min-h-[2850px] pt-16 md:pt-24 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -69,7 +69,7 @@ export const HeroParallax = ({
         }}
         className=""
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-12 md:space-x-16 lg:space-x-20 mb-12 md:mb-16 lg:mb-20">
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -78,7 +78,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row  mb-20 space-x-20 ">
+        <motion.div className="flex flex-row mb-12 md:mb-16 lg:mb-20 space-x-12 md:space-x-16 lg:space-x-20">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -87,7 +87,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-12 md:space-x-16 lg:space-x-20">
           {thirdRow.map((product) => (
             <ProductCard
               product={product}
@@ -103,7 +103,7 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl relative mx-auto py-12 md:py-40 px-4 w-full left-0 top-0 flex">
+    <div className="max-w-7xl relative mx-auto py-10 md:py-20 lg:py-24 px-4 w-full left-0 top-0 flex flex-col md:flex-row items-center justify-between gap-8">
       <div>
         <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold dark:text-white">
           About my <br /> work experience
@@ -120,7 +120,7 @@ export const Header = () => {
       </div>
       <LottiePlayer
         animationPath="programming.json"
-        className="w-100 h-100 mx-auto mb-8 float-right hidden md:block"
+        className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 shrink-0 mx-auto hidden md:block"
       />
     </div>
   );
@@ -150,7 +150,7 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product h-96 w-[30rem] relative shrink-0"
+      className="group/product h-72 md:h-80 lg:h-96 w-[22rem] md:w-[26rem] lg:w-[30rem] relative shrink-0"
     >
       <a
         href={product.link}
